@@ -8,14 +8,14 @@ export default function Homepage() {
   return (
     <div className="relative  h-[100vh] overflow-hidden">
       {/* <div className="absolute w-1/6 h-[15rem] bg-[#fff] z-30 bottom-6 left-6"></div> */}
-      <div className="absolute w-4/6 center-div bg-[#0000002c] z-30 backdrop-blur-md py-10 px-8 rounded-xl">
+      <div className="absolute w-4/6 center-div bg-[#00000095] z-30 backdrop-blur-md py-10 px-8 rounded-xl">
         <Typography
           variant="h1"
           color="white"
           className="mb-4 text-3xl md:text-4xl lg:text-3xl"
         >Et si votre investissement vous offrait autant de plaisir que de profits? Transformez chaque projet en succès captivant.
         </Typography>
-        <p className="text-[#fff] my-4">Achetez, vendez, et gérez vos biens immobiliers en toute sérénité.</p>
+        <p className="text-[#fff] my-4">Achetez, vendez, et gérez vos biens immobiliers en toute sérénité avec des experts de confiance.</p>
         <div className="flex gap-10">
           <p className="py-2 px-6 bg-[#fff] rounded-3xl text-sm font-extrabold">RESERVER UN APPEL</p>
           <p className="py-2 px-6 bg-[#ad8954] rounded-3xl text-sm text-[#fff] font-extrabold">CONTACTEZ- NOUS</p>

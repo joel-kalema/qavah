@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AiOutlineSend } from "react-icons/ai";
 import { GrCertificate } from "react-icons/gr";
+import Gallery from './gallery'
 
 import { BsHouseCheck } from "react-icons/bs";
 
@@ -56,7 +57,9 @@ export default function Presentation() {
                 </div>
             </div>
 
-            <div className="w-5/6 flex h-[85dvh] mx-auto bg-[#303030] text-white rounded-2xl animate">
+            <Gallery />
+
+            <div className="w-5/6 flex h-[85dvh] mx-auto bg-[#303030] text-white rounded-2xl">
                 <div className="w-2/6 h-full relative overflow-hidden rounded-3xl p-10">
                     <Image src="/about.jpg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                 </div>

@@ -149,7 +149,7 @@ export default function Presentation() {
                     <Image src="/home2.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                     <div className="absolute bg-[#0000006d] backdrop-blur-md w-[93%] m-auto bottom-3 left-3 right-3 rounded-2xl p-4">
                         <h1 className="text-white font-bold mb-2">Découvrez notre offre de syndic de copropriété</h1>
-                        <p className="text-[#d8d8d8] text-xs">Bénéficiez d'une gestion transparente et efficace de votre copropriété.</p>
+                        <p className="text-[#d8d8d8] text-xs">Bénéficiez d&apos;une gestion transparente et efficace de votre copropriété.</p>
                     </div>
                 </div>
             </div>

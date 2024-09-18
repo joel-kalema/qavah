@@ -68,7 +68,7 @@ export default function Questions() {
 
           <Accordion open={open === 4} icon={<Icon id={4} open={open} />}>
             <AccordionHeader onClick={() => handleOpen(4)}>
-              Que faire si j'ai un problème avec ma location ?
+              Que faire si j&apos;ai un problème avec ma location ?
             </AccordionHeader>
             <AccordionBody className="w-5/6">
               Signalez tout problème via votre portail locataire. Notre équipe se chargera

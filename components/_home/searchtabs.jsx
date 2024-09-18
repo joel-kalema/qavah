@@ -57,7 +57,7 @@ export default function TabsWithIcon() {
         ))}
       </TabsHeader>
       <TabsBody>
-        {data.map(({ value, desc }) => (
+        {data.map(({ value }) => (
           <TabPanel key={value} value={value}>
             <Card color="transparent" shadow={false}>
               <form className="mb-2 flex justify-between gap-2">

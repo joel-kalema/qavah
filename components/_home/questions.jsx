@@ -79,7 +79,7 @@ export default function Questions() {
       </div>
 
       <div className="h-[30rem] overflow-hidden w-2/6 relative rounded-xl">
-        <Image src="/question.jpg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+        <Image src="/question.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
       </div>
     </div>
   );

@@ -80,7 +80,7 @@ const Carousel = () => {
             <div className="carousel overflow-hidden" ref={carouselRef}>
                 <div className="list" ref={listRef}>
 
-                    <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/home1.jpg")' }}>
+                    <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/home1.jpeg")' }}>
                         <div className="content">
                             <div className="title">Trouvez votre prochaine location</div>
                             {/* <div className="name">EAGLE</div> */}
@@ -94,7 +94,7 @@ const Carousel = () => {
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/home4.jpg")' }}>
+                    <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/home4.jpeg")' }}>
                         <div className="content">
                             <div className="title">Gérez vos biens en toute sérénité</div>
                             {/* <div className="name">OWL</div> */}
@@ -108,7 +108,7 @@ const Carousel = () => {
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/home2.jpg")' }}>
+                    <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/home2.jpeg")' }}>
                         <div className="content">
                             <div className="title">Explorez nos terrains disponibles</div>
                             {/* <div className="name">CROW</div> */}
@@ -122,7 +122,7 @@ const Carousel = () => {
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/home3.jpg")' }}>
+                    <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/home3.jpeg")' }}>
                         <div className="content">
                             <div className="title">Découvrez notre offre de syndic de copropriété</div>
                             {/* <div className="name">CROW</div> */}

@@ -13,7 +13,7 @@ export default function Gallery() {
             </div>
             <div className="flex gap-6 overflow-hidden">
                 <div className="h-[38rem] w-3/6 overflow-hidden relative rounded-xl">
-                    <Image src="/house1.jpg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                    <Image src="/house1.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                     <div className="absolute bg-[#0000006d] backdrop-blur-md w-[93%] m-auto bottom-3 left-3 right-3 rounded-2xl p-4">
                         <h1 className="text-white text-2xl font-bold mb-2">Découvrez notre offre de syndic de copropriété</h1>
                         <p className="text-[#d8d8d8] text-xs">Bénéficiez d'une gestion transparente et efficace de votre copropriété.</p>
@@ -21,14 +21,14 @@ export default function Gallery() {
                 </div>
                 <div className="w-3/6 gap-6 flex flex-col">
                     <div className="h-[16.5rem] w-6/6 overflow-hidden relative rounded-xl">
-                        <Image src="/house2.jpg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                        <Image src="/house2.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                     </div>
                     <div className="flex gap-6">
                         <div className="h-[20rem] w-3/6 overflow-hidden relative rounded-xl">
-                            <Image src="/house3.jpg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                            <Image src="/house3.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                         </div>
                         <div className="h-[20rem] w-3/6 overflow-hidden relative rounded-xl">
-                            <Image src="/house4.jpg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                            <Image src="/house4.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                         </div>
                     </div>
                 </div>

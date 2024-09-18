@@ -25,7 +25,7 @@ export default function Contacts() {
         <div >
             <div className="">
                 <div className="h-[100vh] w-6/6 overflow-hidden relative rounded-xl">
-                    <Image src="/contact.jpg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                    <Image src="/contact.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                     <div className="absolute left-40 top-10">
                         <div className="text-white mb-10">
                             <h1 className="text-center text-6xl mb-4">Et si on se parlait ?</h1>

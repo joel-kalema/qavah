@@ -1,24 +1,7 @@
 'use client'
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Typography } from "@material-tailwind/react";
 import { Button } from "@material-tailwind/react";
-
-const LINKS = [
-    {
-        title: "Product",
-        items: ["Overview", "Features", "Solutions", "Tutorials"],
-    },
-    {
-        title: "Company",
-        items: ["About us", "Careers", "Press", "News"],
-    },
-    {
-        title: "Resource",
-        items: ["Blog", "Newsletter", "Events", "Help center"],
-    },
-];
 
 export default function Contacts() {
     return (

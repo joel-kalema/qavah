@@ -43,7 +43,7 @@ export default function Presentation() {
 
                     <div className="flex w-3/6 gap-4 bg-[#ececec] rounded-xl p-6">
                         <div className="w-3/6">
-                            <p className="text-sm mb-6">Nous avons été témoins de l’évolution constante du paysage du marché immobilier et sommes devenus un partenaire de confiance pour des milliers de clients.</p>
+                            <p className="text-sm mb-6">Nous avons été témoins de l&apos;évolution constante du paysage du marché immobilier et sommes devenus un partenaire de confiance pour des milliers de clients.</p>
 
                             <div className="w-[5rem] h-[5rem] bg-[#ad8954] rounded-[50%] flex justify-center items-center">
                                 <div className="w-[4rem] border border-[#fff] border-dashed h-[4rem] bg-[#ad8954] rounded-[50%] flex justify-center items-center">
@@ -76,14 +76,14 @@ export default function Presentation() {
                                 <GrCertificate className="text-3xl" />
                                 <div>
                                     <h1 className="font-bold mb-2">Confiance</h1>
-                                    <p className="text-sm">Nous bâtissons des relations basées sur la transparence et l'intégrité.</p>
+                                    <p className="text-sm">Nous bâtissons des relations basées sur la transparence et l&apos;intégrité.</p>
                                 </div>
                             </div>
                             <div className="w-2/3 flex items-center gap-10 bg-[#fffaf1] text-black rounded-2xl px-6 py-4 mb-2">
                                 <GrCertificate className="text-3xl" />
                                 <div>
                                     <h1 className="font-bold mb-2">Innovation</h1>
-                                    <p className="text-sm">Profitez d'outils modernes pour simplifier vos démarches immobilières.</p>
+                                    <p className="text-sm">Profitez d&apos;outils modernes pour simplifier vos démarches immobilières.</p>
                                 </div>
                             </div>
                             <div className="w-2/3 flex items-center gap-10 bg-[#e3e3e3] text-black rounded-2xl px-6 py-4 mb-2">
@@ -150,7 +150,7 @@ export default function Presentation() {
                     <Image src="/home2.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                     <div className="absolute bg-[#0000006d] backdrop-blur-md w-[93%] m-auto bottom-3 left-3 right-3 rounded-2xl p-4">
                         <h1 className="text-white font-bold mb-2">Découvrez notre offre de syndic de copropriété</h1>
-                        <p className="text-[#d8d8d8] text-xs">Bénéficiez d'une gestion transparente et efficace de votre copropriété.</p>
+                        <p className="text-[#d8d8d8] text-xs">Bénéficiez d&apos;une gestion transparente et efficace de votre copropriété.</p>
                     </div>
                 </div>
             </div>

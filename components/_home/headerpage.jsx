@@ -127,7 +127,7 @@ const Carousel = () => {
                             <div className="title">Découvrez notre offre de syndic de copropriété</div>
                             {/* <div className="name">CROW</div> */}
                             <div className="des">
-                                Bénéficiez d'une gestion transparente et efficace de votre copropriété.
+                                Bénéficiez d&apos;une gestion transparente et efficace de votre copropriété.
                             </div>
                             <div className="btn flex gap-4">
                                 <p className='py-2 px-6 bg-[#fff] text-black rounded-3xl text-sm font-extrabold'>See More</p>

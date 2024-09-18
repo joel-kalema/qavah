@@ -51,7 +51,7 @@ export default function Questions() {
             </AccordionHeader>
             <AccordionBody className="w-5/6">
               Nous proposons une gestion complète incluant la collecte des loyers,
-              l'entretien des propriétés, la gestion des baux, et le suivi des obligations
+              l&apos;entretien des propriétés, la gestion des baux, et le suivi des obligations
               légales. Accédez à notre portail propriétaire pour suivre la gestion de vos biens.
             </AccordionBody>
           </Accordion>
@@ -61,7 +61,7 @@ export default function Questions() {
             </AccordionHeader>
             <AccordionBody className="w-5/6">
               Demandez une estimation gratuite en ligne en remplissant le formulaire dans
-              la section "Vendez votre bien". Nos experts évalueront votre propriété en
+              la section &quot;Vendez votre bien&quot;. Nos experts évalueront votre propriété en
               fonction des tendances du marché et vous fourniront un prix compétitif.
             </AccordionBody>
           </Accordion>
@@ -72,7 +72,7 @@ export default function Questions() {
             </AccordionHeader>
             <AccordionBody className="w-5/6">
               Signalez tout problème via votre portail locataire. Notre équipe se chargera
-              de gérer les réparations urgentes et l'entretien courant pour assurer votre satisfaction.
+              de gérer les réparations urgentes et l&apos;entretien courant pour assurer votre satisfaction.
             </AccordionBody>
           </Accordion>
         </div>

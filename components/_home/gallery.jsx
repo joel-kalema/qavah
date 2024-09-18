@@ -1,8 +1,6 @@
 'use client'
 
 import Image from "next/image";
-import { FaRegHeart } from "react-icons/fa6";
-
 export default function Gallery() {
     return (
         <div className="w-5/6 mx-auto px-10 py-40">

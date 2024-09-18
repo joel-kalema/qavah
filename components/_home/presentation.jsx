@@ -2,11 +2,14 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { AiOutlineSend } from "react-icons/ai";
 import { GrCertificate } from "react-icons/gr";
 import Gallery from './gallery'
 
 import { BsHouseCheck } from "react-icons/bs";
+import { LuChevronRightCircle } from "react-icons/lu";
+import { IoChevronForwardSharp } from "react-icons/io5";
 
 export default function Presentation() {
     return (
@@ -95,7 +98,18 @@ export default function Presentation() {
                 </div>
             </div>
 
-            <h1 className="text-center font-extrabold m-20 my-28 text-4xl">Menus <span className="text-[#ad8954]">Qavah Group</span></h1>
+
+            <div className="flex justify-between w-4/5 mx-auto mt-40 items-center">
+                <div>
+                <h1 className="text-end font-extrabold text-6xl">Menus</h1>
+                <h1 className="text-end font-extrabold text-6xl text-[#ad8954]">Qavah Group</h1>
+                </div>
+                <div>
+                    <p className="flex gap-4 items-center mb-2"><LuChevronRightCircle className="text-xl text-[#ad8954]"/>Explorez les offres actuelles spécialement sélectionnées pour vous.</p>
+                    <p className="flex gap-4 items-center mb-2"><LuChevronRightCircle className="text-xl text-[#ad8954]"/>Ne manquez pas les meilleures opportunités du moment, disponibles dès maintenant.</p>
+                    <p className="flex gap-4 items-center mb-2"><LuChevronRightCircle className="text-xl text-[#ad8954]"/>Faites un pas vers la découverte de biens uniques qui correspondent à vos attentes.</p>
+                </div>
+            </div>
 
             <div className="flex justify-between gap-5 w-5/6 mx-auto my-20">
                 <div className="w-1/3 h-[25rem] relative overflow-hidden rounded-3xl">
@@ -139,6 +153,13 @@ export default function Presentation() {
                         <p className="text-[#d8d8d8] text-xs">Bénéficiez d'une gestion transparente et efficace de votre copropriété.</p>
                     </div>
                 </div>
+            </div>
+
+            <div className="flex gap-4 w-5/6 mx-auto items-end">
+                <h1 className="text-2xl font-extrabold">Explorez nos bien :</h1>
+                <Link href='#' className="text-[#ad8954] underline underline-offset-2 flex items-center gap-3">Nos biens à moins de 100 000 $<IoChevronForwardSharp /></Link>
+                <Link href='#' className="text-[#ad8954] underline underline-offset-2 flex items-center gap-3">Spécial investissement locatif en Pinel<IoChevronForwardSharp /></Link>
+                <Link href='#' className="text-[#ad8954] underline underline-offset-2 flex items-center gap-3">Nos terrains à bâtir<IoChevronForwardSharp /></Link>
             </div>
         </div>
     );

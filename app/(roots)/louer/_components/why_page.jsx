@@ -10,8 +10,8 @@ import { SiTraefikproxy } from "react-icons/si";
 export default function WhyPage() {
     return (
         <div>
-            <div className=" mx-auto overflow-hidden relative flex w-5/6 my-40 gap-10">
-                <div className="flex w-2/6 h-[70vh] pb-20">
+            <div className=" mx-auto overflow-hidden relative flex w-4/5 my-40 gap-10">
+                <div className="flex w-3/6 h-[70vh] pb-20">
                     <div className="overflow-hidden relative h-full w-2/4 rounded-l-3xl">
                         <Image src="/louer1.jpeg" layout="fill" objectFit="cover" alt="bay" quality={60} />
                     </div>
@@ -20,9 +20,9 @@ export default function WhyPage() {
                     </div>
                 </div>
 
-                <div className="w-4/6 pt-10">
+                <div className="w-3/6 pt-10">
                     <h1 className="text-5xl mb-10 text-[#ad8954] font-extrabold">Biens à louer :</h1>
-                    <p className="mb-6 w-5/6">Chez Qavah, nous comprenons que trouver le logement idéal est
+                    <p className="mb-6">Chez Qavah, nous comprenons que trouver le logement idéal est
                         une étape cruciale dans la réalisation de vos projets personnels ou professionnels.
                         C&apos;est pourquoi nous vous proposons une sélection exceptionnelle de biens à louer
                         qui répondent à tous types de besoins et de budgets. Notre portefeuille comprend

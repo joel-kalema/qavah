@@ -10,7 +10,6 @@ import { CiCalendarDate } from "react-icons/ci";
 import { LuChevronRightCircle } from "react-icons/lu";
 import { IoChevronForwardSharp } from "react-icons/io5";
 import CarouselCustomNavigation from "./_component/caroucelle"
-import { BsHouseCheck } from "react-icons/bs";
 import { GiSpeedometer } from "react-icons/gi";
 
 export default function Presentation() {
@@ -51,7 +50,7 @@ export default function Presentation() {
 
                             <div className="text-[#fff] bg-[#303030] p-4 rounded-xl flex justify-between items-center">
                                 <div className="">
-                                    <p className="text-[#ad8954] font-extrabold text-xl mb-4">Procédure d'achat :</p>
+                                    <p className="text-[#ad8954] font-extrabold text-xl mb-4">Procédure d&apos;achat :</p>
                                     <p className="flex gap-2 items-center font-bold text-xl mb-2"><AiFillCheckCircle className="text-[#ad8954]" />Recherche et sélection</p>
                                     <p className="flex gap-2 items-center font-bold text-xl mb-2"><AiFillCheckCircle className="text-[#ad8954]" />Évaluation et négociation</p>
                                     <p className="flex gap-2 items-center font-bold text-xl mb-2"><AiFillCheckCircle className="text-[#ad8954]" />Acquisition</p>

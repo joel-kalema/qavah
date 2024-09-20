@@ -9,7 +9,7 @@ export default function Home() {
     <Carousel />
     <Presentation />
     <Questions />
-    <Contacts />
+    {/* <Contacts /> */}
     </>
   );
 }

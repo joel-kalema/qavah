@@ -13,7 +13,7 @@ export default function AvisPage() {
         <div className="w-3/6 py-10 px-14 glass absolute right-20 bottom-40">
             <h1 className="text-4xl mb-10 text-[#ad8954] font-extrabold">Votre avis nous est précieux</h1>
             <p className="font-bold text-2xl">&#39;&#39;Suivi clair et précis, équipe très professionnelle qui vous aide, 
-            très patients. Premier logement pour mon cas et l'expérience était parfaite ! &#39;&#39;</p>
+            très patients. Premier logement pour mon cas et l&lsquo;expérience était parfaite ! &#39;&#39;</p>
         </div>
     </div>
     );

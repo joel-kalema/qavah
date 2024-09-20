@@ -13,10 +13,10 @@ export default function WhyPage() {
             <div className=" mx-auto overflow-hidden relative flex w-5/6 my-40 gap-10">
                 <div className="flex w-2/6 h-[70vh] pb-20">
                     <div className="overflow-hidden relative h-full w-2/4 rounded-l-3xl">
-                        <Image src="/louer1.jpg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                        <Image src="/louer1.jpeg" layout="fill" objectFit="cover" alt="bay" quality={60} />
                     </div>
                     <div className="overflow-hidden relative h-full w-2/4 rounded-r-3xl mt-10">
-                        <Image src="/louer2.jpg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                        <Image src="/louer2.jpeg" layout="fill" objectFit="cover" alt="bay" quality={60} />
                     </div>
                 </div>
 

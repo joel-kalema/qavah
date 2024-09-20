@@ -28,7 +28,7 @@ export default function Footer() {
             <div className="w-5/6 mx-auto pb-14 flex justify-between items-center">
                 <div>
                     <h1 className="text-6xl mb-4">Prêt à travailler avec nous?</h1>
-                    <p>Bénéficiez d'un service client de premier ordre et laissez-nous vous guider dans votre parcours immobilier</p>
+                    <p>Bénéficiez d&lsquo;un service client de premier ordre et laissez-nous vous guider dans votre parcours immobilier</p>
                 </div>
                 <div className="w-[7rem] h-[7rem] bg-[#ad8954] rounded-[50%] flex justify-center items-center">
                     <div className="w-[5rem] border border-[#fff] border-dashed h-[5rem] bg-[#ad8954] rounded-[50%] flex justify-center items-center">

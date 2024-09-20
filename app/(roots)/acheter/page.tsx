@@ -63,7 +63,7 @@ export default function Presentation() {
                         </div>
 
                         <div className="h-full w-3/6 overflow-hidden relative rounded-xl">
-                            <Image src="/home4.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                            <Image src="/louer1.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                         </div>
 
                     </div>
@@ -71,7 +71,7 @@ export default function Presentation() {
             </div>
 
 
-            <div className="flex w-5/6 mx-auto mt-20">
+            <div className="flex w-5/6 mx-auto mt-40">
 
                 <div className="flex mx-auto gap-20">
                     <div className="w-3/6">
@@ -95,7 +95,7 @@ export default function Presentation() {
                     </div>
 
                     <div className="h-full w-3/6 overflow-hidden relative rounded-xl mb-2">
-                        <Image src="/plot.jpg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                        <Image src="/plot.jpeg" layout="fill" objectFit="cover" alt="bay" quality={80} />
                     </div>
 
                 </div>

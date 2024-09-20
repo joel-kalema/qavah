@@ -4,11 +4,9 @@ import React from "react";
 import {
   Navbar,
   Collapse,
-  Typography,
   Button,
   IconButton,
   List,
-  ListItem,
 } from "@material-tailwind/react";
 import {
   Bars3Icon,
@@ -22,7 +20,8 @@ function NavList() {
     <List className="mb-6 mt-4 p-0 lg:mb-0 lg:mt-0 lg:flex-row lg:p-1">
       <Link href="/" className="flex items-center gap-2 py-2 px-6">Acueil</Link>
       <Link href="/acheter" className="flex items-center gap-2 py-2 px-6">Acheter</Link>
-      <Typography
+      <Link href="/louer" className="flex items-center gap-2 py-2 px-6">Louer</Link>
+      {/* <Typography
         as="a"
         href="#"
         variant="small"
@@ -32,17 +31,8 @@ function NavList() {
         <ListItem className="flex items-center gap-2 py-2 px-6">
           Investir
         </ListItem>
-      </Typography>
+      </Typography> */}
       {/* <NavListMenu /> */}
-      <Typography
-        as="a"
-        href="#"
-        variant="small"
-        color="blue-gray"
-        className="font-medium"
-      >
-        <ListItem className="flex items-center gap-2 py-2 px-6">Louer</ListItem>
-      </Typography>
     </List>
   );
 }

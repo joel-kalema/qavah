@@ -3,110 +3,115 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineSend } from "react-icons/ai";
-import { GrCertificate } from "react-icons/gr";
 import Gallery from '@/components/_home/gallery';
+import { AiFillCheckCircle } from "react-icons/ai";
+import { CiCalendarDate } from "react-icons/ci";
 
-import { BsHouseCheck } from "react-icons/bs";
 import { LuChevronRightCircle } from "react-icons/lu";
 import { IoChevronForwardSharp } from "react-icons/io5";
+import CarouselCustomNavigation from "./_component/caroucelle"
+import { GiSpeedometer } from "react-icons/gi";
 
 export default function Presentation() {
     return (
         <div className="">
-            <div className="p-40">
-                <div className="flex gap-10 mb-10">
-                    <h1 className="text-5xl font-extrabold w-3/6">Vos conseillers immobiliers de confiance</h1>
-                    <p className="w-3/6">Bienvenue sur Qavah Group, votre partenaire pour toutes vos transactions immobilières :
-                        achat, vente, gestion ou location. Notre équipe expérimentée et nos services personnalisés
-                        vous garantissent des démarches simples, sûres et efficaces.</p>
-                </div>
-                <div className="flex gap-4">
-                    <div className="flex flex-wrap gap-4 w-3/6">
-                        <div className="bg-[#e8e8e8] py-4 px-8 rounded-xl w-[48%]">
-                            <h1 className="text-4xl font-extrabold mb-6">+100</h1>
-                            <p className="text-sm">Unités prêtes</p>
-                        </div>
-                        <div className="bg-[#c7c7c7] py-4 px-8 rounded-xl w-[48%]">
-                            <h1 className="text-4xl font-extrabold mb-6">+60K</h1>
-                            <p className="text-sm">Clients satisfaits</p>
-                        </div>
-                        <div className="bg-[#ad8954] py-4 px-8 text-[#fff] rounded-xl w-[48%]">
-                            <h1 className="text-4xl font-extrabold mb-6">+70K</h1>
-                            <p className="text-sm">Collections de propriétés</p>
-                        </div>
-                        <div className="bg-[#e8e8e8] py-4 px-8 rounded-xl w-[48%]">
-                            <h1 className="text-4xl font-extrabold mb-6">+100</h1>
-                            <p className="text-sm">Unités prêtes</p>
+            <div className="h-[90vh] mb-40 w-11/12 mx-auto overflow-hidden relative rounded-3xl">
+                <Image src="/home2.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                <div className="absolute bottom-10  p-4 left-10 flex w-4/6 justify-between items-center gap-10 bg-[#0000006d] backdrop-blur-md rounded-2xl">
+                    <div className="text-white w-5/6">
+                        <h1 className="text-4xl text-white font-extrabold mb-6">Concrétisons votre projet d&apos;achat d&apos;un bien immobilier</h1>
+                        <div className="btn flex gap-4 p-1 bg-[#ffffff35] rounded-3xl">
+                            <p className='py-2 px-6 bg-[#fff] bg-[#ffffff35] rounded-3xl text-sm font-extrabold'>See More</p>
+                            <p className="py-2 px-6 bg-[#ffffff35] rounded-3xl text-sm text-[#fff] font-extrabold">Subscribe</p>
+                            <p className="flex items-center float-right text-[#fff] gap-5 ml-10"><CiCalendarDate className="text-2xl" /> Réussissez votre achat immobilier avec Qavah</p>
                         </div>
                     </div>
+                    <div className="w-1/6 h-[10rem]">
+                        <CarouselCustomNavigation />
+                        {/* <div className="h-[4rem] bg-white"></div> */}
+                    </div>
+                </div>
+            </div>
+            <div className="px-40">
+                <div className="flex gap-10 mb-20">
+                    <h1 className="text-5xl font-extrabold w-3/6">Réussissez votre achat immobilier avec Qavah</h1>
+                    <p className="w-3/6">Chacun possède une bonne raison pour acheter un appartement ou une maison :
+                        votre famille qui s&apos;agrandit, une nouvelle carrière qui commence, un projet de vie qui aboutit…
+                        Nous vous proposons dans votre ville et votre quartier la sélection de biens qui donneront vie à votre projet.</p>
+                </div>
+                <div className="flex">
 
-                    <div className="flex w-3/6 gap-4 bg-[#ececec] rounded-xl p-6">
+                    <div className="flex mx-auto gap-10 bg-[#ececec] rounded-xl p-6">
                         <div className="w-3/6">
-                            <p className="text-sm mb-6">Nous avons été témoins de l&apos;évolution constante du paysage du marché immobilier et sommes devenus un partenaire de confiance pour des milliers de clients.</p>
+                            <p className="text-xl mb-6">At Qavah, we facilitate the acquisition of land by supporting you
+                                at every step of the process. Whether you are an investor seeking the ideal plot or an
+                                individual looking to build your dream home, our team is here to provide personalized advice.
+                                We identify the most interesting land opportunities while respecting your needs and budget.</p>
 
-                            <div className="w-[5rem] h-[5rem] bg-[#ad8954] rounded-[50%] flex justify-center items-center">
-                                <div className="w-[4rem] border border-[#fff] border-dashed h-[4rem] bg-[#ad8954] rounded-[50%] flex justify-center items-center">
-                                    <BsHouseCheck className="text-2xl text-[#fff]" />
+                            <div className="text-[#fff] bg-[#303030] p-4 rounded-xl flex justify-between items-center">
+                                <div className="">
+                                    <p className="text-[#ad8954] font-extrabold text-xl mb-4">Procédure d&apos;achat :</p>
+                                    <p className="flex gap-2 items-center font-bold text-xl mb-2"><AiFillCheckCircle className="text-[#ad8954]" />Recherche et sélection</p>
+                                    <p className="flex gap-2 items-center font-bold text-xl mb-2"><AiFillCheckCircle className="text-[#ad8954]" />Évaluation et négociation</p>
+                                    <p className="flex gap-2 items-center font-bold text-xl mb-2"><AiFillCheckCircle className="text-[#ad8954]" />Acquisition</p>
+                                </div>
+                                <div className="w-[5rem] h-[5rem] bg-[#ad8954] rounded-[50%] flex justify-center items-center">
+                                    <GiSpeedometer className="text-6xl text-[#fff]" />
                                 </div>
                             </div>
                         </div>
 
                         <div className="h-full w-3/6 overflow-hidden relative rounded-xl">
-                            <Image src="/home4.jpg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                            <Image src="/louer1.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                         </div>
 
                     </div>
                 </div>
             </div>
+
+
+            <div className="flex w-5/6 mx-auto mt-40">
+
+                <div className="flex mx-auto gap-20">
+                    <div className="w-3/6">
+                        <div>
+                            <h1 className="text-4xl font-extrabold mb-4">Pourquoi choisir Qavah pour l&apos;achat de vos terrains ?</h1>
+                            <div className="mb-4">
+                                <h1 className="flex gap-2 items-center font-bold text-xl mb-2"><AiFillCheckCircle className="text-[#ad8954]" />Un réseau étendu de partenaires locaux : </h1>
+                                <p className="ml-6">Nos relations avec des promoteurs, des agences gouvernementales et des partenaires fonciers nous permettent d&apos;avoir accès à des terrains exclusifs avant même qu&apos;ils n&apos;arrivent sur le marché.</p>
+                            </div>
+
+                            <div className="mb-4">
+                                <h1 className="flex gap-2 items-center font-bold text-xl mb-2"><AiFillCheckCircle className="text-[#ad8954]" />Des opportunités sur mesure : </h1>
+                                <p className="ml-6">Que vous cherchiez une petite parcelle pour un projet résidentiel ou un terrain plus vaste pour une opération commerciale, nous trouvons pour vous des terrains adaptés à votre vision.</p>
+                            </div>
+
+                            <div className="mb-4">
+                                <h1 className="flex gap-2 items-center font-bold text-xl"><AiFillCheckCircle className="text-[#ad8954]" />Un accompagnement personnalisé :</h1>
+                                <p className="ml-6">Nous vous fournissons non seulement des conseils stratégiques, mais également des services post-acquisition, tels que l&apos;aide à la planification des travaux et la gestion des formalités pour démarrer votre projet dans les meilleures conditions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="h-full w-3/6 overflow-hidden relative rounded-xl mb-2">
+                        <Image src="/plot.jpeg" layout="fill" objectFit="cover" alt="bay" quality={80} />
+                    </div>
+
+                </div>
+            </div>
+
 
             <Gallery />
 
-            <div className="w-5/6 flex h-[85dvh] mx-auto bg-[#303030] text-white rounded-2xl">
-                <div className="w-2/6 h-full relative overflow-hidden rounded-3xl p-10">
-                    <Image src="/about.jpg" layout="fill" objectFit="cover" alt="bay" quality={100} />
-                </div>
-                <div className="w-4/6 py-12 px-10">
-                    <h1 className="text-3xl mb-6 font-extrabold">Chez Qavah Group, nous nous efforçons de vous offrir des solutions immobilières qui répondent à vos besoins.</h1>
-                    <div className="">
-                        <p className="mb-4">Que vous souhaitiez acheter, vendre, louer ou gérer vos biens, notre expertise et nos services personnalisés vous accompagnent à chaque étape pour garantir la réussite de vos projets immobiliers.</p>
-                        <h2 className="text-[#ad8954] mb-4 font-extrabold">Principales Valeurs :</h2>
-                        <div className="">
-                            <div className="w-2/3 flex items-center gap-10 bg-[#fffaf1] text-black rounded-2xl px-6 py-4 mb-2">
-                                <GrCertificate className="text-3xl" />
-                                <div>
-                                    <h1 className="font-bold mb-2">Confiance</h1>
-                                    <p className="text-sm">Nous bâtissons des relations basées sur la transparence et l&apos;intégrité.</p>
-                                </div>
-                            </div>
-                            <div className="w-2/3 flex items-center gap-10 bg-[#fffaf1] text-black rounded-2xl px-6 py-4 mb-2">
-                                <GrCertificate className="text-3xl" />
-                                <div>
-                                    <h1 className="font-bold mb-2">Innovation</h1>
-                                    <p className="text-sm">Profitez d&apos;outils modernes pour simplifier vos démarches immobilières.</p>
-                                </div>
-                            </div>
-                            <div className="w-2/3 flex items-center gap-10 bg-[#e3e3e3] text-black rounded-2xl px-6 py-4 mb-2">
-                                <GrCertificate className="text-3xl" />
-                                <div>
-                                    <h1 className="font-bold mb-2">Expertise</h1>
-                                    <p className="text-sm">Bénéficiez de conseils professionnels et personnalisés tout au long de votre parcours.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div className="flex justify-between w-4/5 mx-auto mt-40 items-center">
+            <div className="flex justify-between w-4/5 mx-auto items-center">
                 <div>
-                <h1 className="text-end font-extrabold text-6xl">Menus</h1>
-                <h1 className="text-end font-extrabold text-6xl text-[#ad8954]">Qavah Group</h1>
+                    <h1 className="text-end font-extrabold text-6xl">Menus</h1>
+                    <h1 className="text-end font-extrabold text-6xl text-[#ad8954]">Qavah Group</h1>
                 </div>
                 <div>
-                    <p className="flex gap-4 items-center mb-2"><LuChevronRightCircle className="text-xl text-[#ad8954]"/>Explorez les offres actuelles spécialement sélectionnées pour vous.</p>
-                    <p className="flex gap-4 items-center mb-2"><LuChevronRightCircle className="text-xl text-[#ad8954]"/>Ne manquez pas les meilleures opportunités du moment, disponibles dès maintenant.</p>
-                    <p className="flex gap-4 items-center mb-2"><LuChevronRightCircle className="text-xl text-[#ad8954]"/>Faites un pas vers la découverte de biens uniques qui correspondent à vos attentes.</p>
+                    <p className="flex gap-4 items-center mb-2"><LuChevronRightCircle className="text-xl text-[#ad8954]" />Explorez les offres actuelles spécialement sélectionnées pour vous.</p>
+                    <p className="flex gap-4 items-center mb-2"><LuChevronRightCircle className="text-xl text-[#ad8954]" />Ne manquez pas les meilleures opportunités du moment, disponibles dès maintenant.</p>
+                    <p className="flex gap-4 items-center mb-2"><LuChevronRightCircle className="text-xl text-[#ad8954]" />Faites un pas vers la découverte de biens uniques qui correspondent à vos attentes.</p>
                 </div>
             </div>
 
@@ -159,6 +164,11 @@ export default function Presentation() {
                 <Link href='#' className="text-[#ad8954] underline underline-offset-2 flex items-center gap-3">Nos biens à moins de 100 000 $<IoChevronForwardSharp /></Link>
                 <Link href='#' className="text-[#ad8954] underline underline-offset-2 flex items-center gap-3">Spécial investissement locatif en Pinel<IoChevronForwardSharp /></Link>
                 <Link href='#' className="text-[#ad8954] underline underline-offset-2 flex items-center gap-3">Nos terrains à bâtir<IoChevronForwardSharp /></Link>
+            </div>
+
+            <div className="w-4/6 mx-auto my-40 bg-[#efefef] px-20 py-12 rounded-2xl">
+                <h1 className="text-3xl mb-10 font-bold text-[#ad8954]">Avec Qavah, vous n&apos;achetez pas simplement un terrain :</h1>
+                <p className="text-2xl font-bold text-[#5d5d5d]"> vous bénéficiez d&apos;un partenaire fiable et expérimenté pour faire de votre projet un succès. Que vous soyez à la recherche d&apos;un investissement à fort rendement ou d&apos;un terrain pour construire votre futur chez-vous, nous mettons tout en œuvre pour que votre expérience d&apos;achat soit fluide, transparente et satisfaisante.</p>
             </div>
         </div>
     );

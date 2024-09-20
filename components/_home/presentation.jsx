@@ -61,8 +61,8 @@ export default function Presentation() {
 
             <Gallery />
 
-            <div className="w-5/6 flex h-[85dvh] mx-auto bg-[#303030] text-white rounded-2xl">
-                <div className="w-2/6 h-full relative overflow-hidden rounded-3xl p-10">
+            <div className="w-5/6 flex min-h-[85dvh] mx-auto bg-[#303030] text-white rounded-2xl">
+                <div className="w-2/6 min-h-[85dvh] relative overflow-hidden rounded-3xl p-10">
                     <Image src="/about.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                 </div>
                 <div className="w-4/6 py-12 px-10">

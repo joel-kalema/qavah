@@ -94,7 +94,7 @@ const Carousel = () => {
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/home4.jpeg")' }}>
+                    <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/bien.jpeg")' }}>
                         <div className="content">
                             <div className="title">Gérez vos biens en toute sérénité</div>
                             {/* <div className="name">OWL</div> */}
@@ -108,7 +108,7 @@ const Carousel = () => {
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/home2.jpeg")' }}>
+                    <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/plot1.jpeg")' }}>
                         <div className="content">
                             <div className="title">Explorez nos terrains disponibles</div>
                             {/* <div className="name">CROW</div> */}

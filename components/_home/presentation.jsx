@@ -52,7 +52,7 @@ export default function Presentation() {
                         </div>
 
                         <div className="h-full w-3/6 overflow-hidden relative rounded-xl">
-                            <Image src="/home4.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                            <Image src="/syndica.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                         </div>
 
                     </div>
@@ -61,9 +61,9 @@ export default function Presentation() {
 
             <Gallery />
 
-            <div className="w-5/6 flex min-h-[85dvh] mx-auto bg-[#303030] text-white rounded-2xl">
+            <div className="w-5/6 flex min-h-[85dvh] mx-auto bg-[#303030] text-white rounded-3xl">
                 <div className="w-2/6 min-h-[85dvh] relative overflow-hidden rounded-3xl p-10">
-                    <Image src="/about.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                    <Image src="/solution.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                 </div>
                 <div className="w-4/6 py-12 px-10">
                     <h1 className="text-3xl mb-6 font-extrabold">Chez Qavah Group, nous nous efforçons de vous offrir des solutions immobilières qui répondent à vos besoins.</h1>
@@ -115,7 +115,7 @@ export default function Presentation() {
                     <div className="z-30 absolute top-3 right-3 hover:-rotate-45 transition duration-300 ease-in-out text-white p-3 rounded-full text-2xl flex justify-center items-center">
                         <AiOutlineSend />
                     </div>
-                    <Image src="/home1.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                    <Image src="/about.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                     <div className="absolute bg-[#0000006d] backdrop-blur-md w-[93%] m-auto h-[8rem] bottom-3 left-3 right-3 rounded-2xl p-4">
                         <h1 className="text-white font-bold mb-2">Gérez vos biens en toute sérénité</h1>
                         <p className="text-[#d8d8d8] text-xs">Confiez-nous la gestion locative et administrative de vos propriétés.</p>
@@ -125,7 +125,7 @@ export default function Presentation() {
                     <div className=" z-30 absolute top-3 right-3 hover:-rotate-45 transition duration-300 ease-in-out text-white p-3 rounded-full text-2xl flex justify-center items-center">
                         <AiOutlineSend />
                     </div>
-                    <Image src="/home3.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                    <Image src="/salon.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                     <div className="absolute bg-[#0000006d] backdrop-blur-md w-[93%] m-auto h-[8rem] bottom-3 left-3 right-3 rounded-2xl p-4">
                         <h1 className="text-white font-bold mb-2">Trouvez votre prochaine location</h1>
                         <p className="text-[#d8d8d8] text-xs">Accédez à une large gamme de logements adaptés à vos besoins.</p>
@@ -135,7 +135,7 @@ export default function Presentation() {
                     <div className=" z-30 absolute top-3 right-3 hover:-rotate-45 transition duration-300 ease-in-out text-white p-3 rounded-full text-2xl flex justify-center items-center">
                         <AiOutlineSend />
                     </div>
-                    <Image src="/home2.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                    <Image src="/plot1.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                     <div className="absolute bg-[#0000006d] backdrop-blur-md w-[93%] m-auto h-[8rem] bottom-3 left-3 right-3 rounded-2xl p-4">
                         <h1 className="text-white font-bold mb-2">Explorez nos terrains disponibles</h1>
                         <p className="text-[#d8d8d8] text-xs">Parcourez une sélection exclusive de terrains prêts à être développés.</p>
@@ -146,7 +146,7 @@ export default function Presentation() {
                     <div className=" z-30 absolute top-3 right-3 hover:-rotate-45 transition duration-300 ease-in-out text-white p-3 rounded-full text-2xl flex justify-center items-center">
                         <AiOutlineSend />
                     </div>
-                    <Image src="/home2.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                    <Image src="/syndicat.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                     <div className="absolute bg-[#0000006d] backdrop-blur-md w-[93%] m-auto bottom-3 left-3 right-3 rounded-2xl p-4">
                         <h1 className="text-white font-bold mb-2">Découvrez notre offre de syndic de copropriété</h1>
                         <p className="text-[#d8d8d8] text-xs">Bénéficiez d&apos;une gestion transparente et efficace de votre copropriété.</p>

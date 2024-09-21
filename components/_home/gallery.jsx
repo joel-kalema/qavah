@@ -19,7 +19,7 @@ export default function Gallery() {
                 </div>
                 <div className="w-3/6 gap-6 flex flex-col">
                     <div className="h-[16.5rem] w-6/6 overflow-hidden relative rounded-xl">
-                        <Image src="/house2.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
+                        <Image src="/salon.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                     </div>
                     <div className="flex gap-6">
                         <div className="h-[20rem] w-3/6 overflow-hidden relative rounded-xl">

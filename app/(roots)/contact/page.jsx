@@ -12,8 +12,6 @@ import { BsPatchCheckFill } from "react-icons/bs";
 import Link from 'next/link';
 
 const Contact = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [activeSection, setActiveSection] = useState('');
     const [open, setOpen] = React.useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
 

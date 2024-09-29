@@ -13,7 +13,6 @@ import Link from 'next/link';
 
 const Contact = () => {
     const [open, setOpen] = React.useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -27,7 +26,6 @@ const Contact = () => {
                 body: formDatab
             }
         ).then(res => {
-            setIsSubmitted(true);
             setOpen(true)
             console.log("this is the respose", res)
             // setName("");
@@ -42,11 +40,6 @@ const Contact = () => {
     }
     const handleOpen = () => setOpen(!open);
 
-    //   const toggleMenu = () => setIsOpen(!isOpen);
-    //   const toggleForm = () => {
-    //     setIsFormOpen(!isFormOpen);
-    //     setIsSubmitted(false);
-    //   };
     return (
         <div className="">
             <div className="pt-40 w-5/6 mx-auto">

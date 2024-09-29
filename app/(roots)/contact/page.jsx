@@ -84,7 +84,7 @@ const Contact = () => {
                 <div className="shadow-design shadow02 w-20 h-20 -mt-16 rounded-[50%] mx-auto flex justify-center items-center bg-[#fff]">
                     <BsPatchCheckFill className="drop-shadow-lg text-[#ad8954] text-5xl" />
                 </div>
-                <h1 className='text-[#202020] font-extrabold text-2xl mt-6 mb-4'>Merci d'avoir soumis votre demande auprès de Qavah Group.</h1>
+                <h1 className='text-[#202020] font-extrabold text-2xl mt-6 mb-4'>Merci d&apos;avoir soumis votre demande auprès de Qavah Group.</h1>
                 <p className='mb-10'>Nous avons bien reçu votre demande concernant nos services immobiliers
                     et sommes ravis de pouvoir vous accompagner dans la recherche de la
                     solution idéale correspondant à vos besoins.

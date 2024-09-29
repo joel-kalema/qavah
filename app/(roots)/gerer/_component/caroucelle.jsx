@@ -27,17 +27,17 @@ export default function CarouselCustomNavigation() {
       )}
     >
       <img
-        src="https://img.batiweb.com/repo-images/article/43524/IMMOBILIER.png"
+        src="https://syndics.mallette.ca/storage/pour-faire-confiance.jpg"
         alt="image 1"
         className="h-full w-full object-cover"
       />
       <img
-        src="https://immokap.fr/wp-content/uploads/achat-bien-immobilier-deja-loue.jpg"
+        src="https://www.cabinetsalmon.fr/wp-content/uploads/2024/02/Gestion-copropriete-1170x0-c-center.jpg"
         alt="image 2"
         className="h-full w-full object-cover"
       />
       <img
-        src="https://www.proprietes-privees.com/_ipx/w_1536&f_jpeg/https://images.proprietes-privees.com/annonce/365942PCS/PROPRIETES-PRIVEES-365942PCS-1.jpg"
+        src="https://i.f1g.fr/media/cms/531x299_crop/2023/05/10/fb159dd88ef6975510f5645caec6535b81759be238632498f8c7911632254b5b.jpg"
         alt="image 3"
         className="h-full w-full object-cover"
       />

@@ -4,46 +4,37 @@ import Image from "next/image";
 import { Typography } from "@material-tailwind/react";
 import { AiOutlineLogin } from "react-icons/ai";
 import { FiArrowUpRight } from "react-icons/fi";
-
-const LINKS = [
-    {
-        title: "Product",
-        items: ["Overview", "Features", "Solutions", "Tutorials"],
-    },
-    {
-        title: "Company",
-        items: ["About us", "Careers", "Press", "News"],
-    },
-    // {
-    //     title: "Resource",
-    //     items: ["Blog", "Newsletter", "Events", "Help center"],
-    // },
-];
+import { FaPhone } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+import Link from "next/link";
+import { MdLocationOn } from "react-icons/md";
 
 const currentYear = new Date().getFullYear();
 
 export default function Footer() {
     return (
-        <div className="bg-[#2c2c2c] text-[#fff] pt-20 rounded-[2rem] relative z-20 m-8">
+        <div className="bg-[#2c2c2c] text-[#fff] pt-12 rounded-[2rem] relative z-20 m-8">
             <div className="w-5/6 mx-auto pb-14 flex justify-between items-center">
                 <div>
                     <h1 className="text-6xl mb-4">Prêt à travailler avec nous?</h1>
                     <p>Bénéficiez d&lsquo;un service client de premier ordre et laissez-nous vous guider dans votre parcours immobilier</p>
                 </div>
-                <div className="w-[7rem] h-[7rem] bg-[#ad8954] rounded-[50%] flex justify-center items-center">
-                    <div className="w-[5rem] border border-[#fff] border-dashed h-[5rem] bg-[#ad8954] rounded-[50%] flex justify-center items-center">
+                <Link href="/contact" className="w-[7rem] h-[7rem] bg-[#ad8954] rounded-[50%] flex justify-center items-center hover:rotate-45 transition duration-300">
+                    <div className="w-[5rem] border border-[#fff] cursor-pointer border-dashed h-[5rem] bg-[#ad8954] rounded-[50%] flex justify-center items-center">
                         <FiArrowUpRight className="text-5xl text-[#fff]" />
                     </div>
-                </div>
+                </Link>
             </div>
             <footer className="relative w-full">
                 <div className="mx-auto w-full max-w-7xl px-8">
-                    <div className="grid grid-cols-1 justify-between items-center gap-4 pt-4 md:grid-cols-2 border-t border-[#6c6c6c]">
-                        <div>
-                            <Image src='/logo.png' height={200} width={400} alt="Eleka logo" className='md:w-16 lg:w-40 my-4' />
+                    <div className="flex justify-between items-center gap-4 py-10 border-t border-[#6c6c6c]">
+                        <div className="2/4">
+                            <Image src='/logo02.png' height={200} width={400} alt="Eleka logo" className='md:w-16 lg:w-40 mb-4' />
                             <div>
-                                <p className="text-sm w-2/4 mb-6">Un agent immobilier de pointe qui offre une expérience fluide et immersive pour trouver la maison de vos rêves</p>
-                                <div className="w-3/5 flex border border-[#6c6c6c] p-2 rounded-md">
+                                <p className="text-sm w-3/4 mb-6 text-[#a4a4a4]">Un agent immobilier vous contactera dans les meilleurs délais</p>
+                                <p className="text-sm w-2/4 mb-1 flex items-center gap-2"><FaPhone className="text-[#ad8954]"/> +243981444440</p>
+                                <Link href="mailto:contact@qavahgroup.com" className="text-sm w-2/4 mb-2 flex items-center gap-2"><IoMdMail className="text-[#ad8954]"/> contact@qavahgroup.com</Link>
+                                <div className=" flex border border-[#6c6c6c] p-2 rounded-md">
                                     <div className="w-4/6 text-[#868686] py-1">Écrivez votre email ici</div>
                                     <div className="w-2/6 bg-[#ad8954] rounded-md py-1 px-2 flex justify-between items-center">
                                         Soumettre <AiOutlineLogin />
@@ -52,38 +43,26 @@ export default function Footer() {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-2 justify-between gap-4 lg:ml-20">
-                            {LINKS.map(({ title, items }) => (
-                                <ul key={title}>
-                                    <Typography
-                                        variant="small"
-                                        color="blue-gray"
-                                        className="mb-3 font-medium opacity-40"
-                                    >
-                                        {title}
-                                    </Typography>
-                                    {items.map((link) => (
-                                        <li key={link}>
-                                            <Typography
-                                                as="a"
-                                                href="#"
-                                                color="gray"
-                                                className="py-1.5 font-normal text-[#a4a4a4]"
-                                            >
-                                                {link}
-                                            </Typography>
-                                        </li>
-                                    ))}
-                                </ul>
-                            ))}
+                        <div className="flex w-2/4 justify-between gap-4">
+                            <div className="flex w-3/4 gap-5">
+                                <MdLocationOn className="text-6xl text-[#ad8954]"/>
+                                <div>
+                                    <h1 className=" font-extrabold mb-1">KINSHASA :</h1>
+                                    <p className="text-sm text-[#868686] mb-2">22,Ave Tombalbaye Kinshasa-Gombe | Réf : Immeuble Otantika, en face du Magasin Regal</p>
+                                    <h1 className=" font-extrabold mb-1">LUBUMBASHI :</h1>
+                                    <p className="text-sm text-[#868686] mb-2">1572, Ave Kasavubu, C/LubumbashI Q/Makutano Référence En face de l’hôtel Mota </p>
+                                    <h1 className=" font-extrabold mb-1">KOLWEZI :</h1>
+                                    <p className="text-sm text-[#868686]">529,Ave Kajama,Kolwezi, Lualaba</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-[#6c6c6c] py-4 md:flex-row md:justify-between">
+                    <div className=" flex w-full flex-col items-center justify-center border-t border-[#6c6c6c] py-4 md:flex-row md:justify-between">
                         <Typography
                             variant="small"
                             className="mb-4 text-center font-normal text-[#a4a4a4] md:mb-0"
                         >
-                            &copy; {currentYear} <a href="https://material-tailwind.com/">Material Tailwind</a>. All
+                            &copy; {currentYear} Qavah Group. All
                             Rights Reserved.
                         </Typography>
                         <div className="flex gap-4 text-[#a4a4a4] sm:justify-center my-6">

@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Card,
     Input,
@@ -68,9 +68,6 @@ const Contact = () => {
                 </div>
             </div>
 
-            {/* <Button onClick={handleOpen} variant="gradient">
-                Open Dialog
-            </Button> */}
             <Dialog open={open} handler={handleOpen} className='relative p-6 text-center'>
                 <div className="shadow-design shadow02 w-20 h-20 -mt-16 rounded-[50%] mx-auto flex justify-center items-center bg-[#fff]">
                     <BsPatchCheckFill className="drop-shadow-lg text-[#ad8954] text-5xl" />

@@ -23,7 +23,6 @@ export default function Louer() {
                     </div>
                     <div className="w-1/6 h-[10rem]">
                         <CarouselCustomNavigation />
-                        {/* <div className="h-[4rem] bg-white"></div> */}
                     </div>
                 </div>
             </div>

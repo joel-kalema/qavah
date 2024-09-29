@@ -4,7 +4,6 @@ import React from "react";
 import {
   Navbar,
   Collapse,
-  Button,
   IconButton,
   List,
 } from "@material-tailwind/react";

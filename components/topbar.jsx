@@ -21,18 +21,8 @@ function NavList() {
       <Link href="/" className="flex items-center gap-2 py-2 px-6">Acueil</Link>
       <Link href="/acheter" className="flex items-center gap-2 py-2 px-6">Acheter</Link>
       <Link href="/louer" className="flex items-center gap-2 py-2 px-6">Louer</Link>
-      {/* <Typography
-        as="a"
-        href="#"
-        variant="small"
-        color="blue-gray"
-        className="font-medium"
-      >
-        <ListItem className="flex items-center gap-2 py-2 px-6">
-          Investir
-        </ListItem>
-      </Typography> */}
-      {/* <NavListMenu /> */}
+      <Link href="/Vendre" className="flex items-center gap-2 py-2 px-6">Vendre</Link>
+      <Link href="/gerer" className="flex items-center gap-2 py-2 px-6">Faire Gérer</Link>
     </List>
   );
 }
@@ -48,17 +38,17 @@ export default function Topbar() {
   }, []);
  
   return (
-    <Navbar fullWidth={true} className="mx-auto w-[100%] px-40 py-4 fixed z-50">
+    <Navbar fullWidth={true} className="mx-auto w-[100%] px-20 py-4 fixed z-50">
       <div className="flex items-center justify-between text-blue-gray-900">
       <Image src='/logo.png' height={100} width={200} alt="logo" className='md:w-16 lg:w-28'/>
         <div className="hidden lg:block">
           <NavList />
         </div>
-        <div className="hidden gap-2 lg:flex">
-          <Button size="sm"> mail@mail.com</Button>
-          <Button variant="outlined" size="sm">
-          Contacter
-          </Button>
+        <div className="hidden gap-4 lg:flex items-center">
+        <Link href="mailto:contact@qavahgroup.com" className="">contact@qavahgroup.com</Link>
+          <Link href="/contact" className="bg-[#ad8954] text-white px-6 py-2 rounded-3xl hover:shadow-xl">
+            Contacter
+          </Link>
         </div>
         <IconButton
           variant="text"
@@ -75,12 +65,10 @@ export default function Topbar() {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button size="sm" fullWidth>
-            mail@mail.com
-          </Button>
-          <Button variant="outlined" size="sm" fullWidth>
+        <Link href="mailto:contact@qavahgroup.com" className="">contact@qavahgroup.com</Link>
+          <Link href="/contact" className="bg-[#ad8954] text-white px-6 py-2 rounded-3xl hover:shadow-xl">
             Contacter
-          </Button>
+          </Link>
         </div>
       </Collapse>
     </Navbar>

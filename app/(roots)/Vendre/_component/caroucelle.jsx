@@ -27,17 +27,17 @@ export default function CarouselCustomNavigation() {
       )}
     >
       <img
-        src="https://img.batiweb.com/repo-images/article/43524/IMMOBILIER.png"
+        src="https://us.123rf.com/450wm/elenaperova/elenaperova2204/elenaperova220400084/184562258-african-american-man-brags-about-buying-new-apartment.jpg?ver=6"
         alt="image 1"
         className="h-full w-full object-cover"
       />
       <img
-        src="https://immokap.fr/wp-content/uploads/achat-bien-immobilier-deja-loue.jpg"
+        src="https://media.istockphoto.com/id/1456438564/photo/couple-second-key-to-new-home-with-hand-in-heart-symbol.jpg?s=612x612&w=0&k=20&c=GyenHW07psHHGfLgtg9KngDRwVb8jx78NCbE_PN2MDE="
         alt="image 2"
         className="h-full w-full object-cover"
       />
       <img
-        src="https://www.proprietes-privees.com/_ipx/w_1536&f_jpeg/https://images.proprietes-privees.com/annonce/365942PCS/PROPRIETES-PRIVEES-365942PCS-1.jpg"
+        src="https://media.istockphoto.com/id/1455111278/photo/man-holding-new-house-key.jpg?s=612x612&w=0&k=20&c=0b7ZcUwBDLiyCsZP7wU-7LVIye4hE7OFMAdmSOvWwoc="
         alt="image 3"
         className="h-full w-full object-cover"
       />

@@ -112,7 +112,7 @@ export default function Presentation() {
 
             <div className="flex justify-between gap-5 w-5/6 mx-auto my-20">
                 <div className="w-1/3 h-[25rem] relative overflow-hidden rounded-3xl">
-                    <div className="z-30 absolute top-3 right-3 hover:-rotate-45 transition duration-300 ease-in-out text-white p-3 rounded-full text-2xl flex justify-center items-center">
+                    <div className="z-30 absolute top-3 right-3 transition duration-300 ease-in-out text-white p-3 rounded-full text-2xl flex justify-center items-center">
                         <AiOutlineSend />
                     </div>
                     <Image src="/about.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
@@ -122,7 +122,7 @@ export default function Presentation() {
                     </div>
                 </div>
                 <div className="w-1/3 h-[25rem] relative overflow-hidden rounded-3xl">
-                    <div className=" z-30 absolute top-3 right-3 hover:-rotate-45 transition duration-300 ease-in-out text-white p-3 rounded-full text-2xl flex justify-center items-center">
+                    <div className=" z-30 absolute top-3 right-3 transition duration-300 ease-in-out text-white p-3 rounded-full text-2xl flex justify-center items-center">
                         <AiOutlineSend />
                     </div>
                     <Image src="/salon.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
@@ -132,7 +132,7 @@ export default function Presentation() {
                     </div>
                 </div>
                 <div className="w-1/3 h-[25rem] relative overflow-hidden rounded-3xl">
-                    <div className=" z-30 absolute top-3 right-3 hover:-rotate-45 transition duration-300 ease-in-out text-white p-3 rounded-full text-2xl flex justify-center items-center">
+                    <div className=" z-30 absolute top-3 right-3 transition duration-300 ease-in-out text-white p-3 rounded-full text-2xl flex justify-center items-center">
                         <AiOutlineSend />
                     </div>
                     <Image src="/plot1.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
@@ -143,7 +143,7 @@ export default function Presentation() {
                 </div>
 
                 <div className="w-1/3 h-[25rem] relative overflow-hidden rounded-3xl">
-                    <div className=" z-30 absolute top-3 right-3 hover:-rotate-45 transition duration-300 ease-in-out text-white p-3 rounded-full text-2xl flex justify-center items-center">
+                    <div className=" z-30 absolute top-3 right-3 transition duration-300 ease-in-out text-white p-3 rounded-full text-2xl flex justify-center items-center">
                         <AiOutlineSend />
                     </div>
                     <Image src="/syndicat.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />

@@ -27,17 +27,17 @@ export default function CarouselCustomNavigation() {
       )}
     >
       <img
-        src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+        src="https://vivrealisbonne.com/wp-content/uploads/2023/04/maison-avec-piscine-au-Portugal-e1682434111727-850x469.jpg"
         alt="image 1"
         className="h-full w-full object-cover"
       />
       <img
-        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+        src="https://www.guideducredit.com/visus/immo-location-meuble.jpeg"
         alt="image 2"
         className="h-full w-full object-cover"
       />
       <img
-        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+        src="https://premihome-immobilier.com/wp-content/uploads/2021/02/question-a%CC%80-poser-premie%CC%80re-visite-achat-immobilier-1024x614.jpg"
         alt="image 3"
         className="h-full w-full object-cover"
       />

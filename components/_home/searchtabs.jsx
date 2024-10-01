@@ -60,23 +60,23 @@ export default function TabsWithIcon() {
         {data.map(({ value }) => (
           <TabPanel key={value} value={value}>
             <Card color="transparent" shadow={false}>
-              <form className="mb-2 flex justify-between gap-2">
-                <div className="flex gap-2 items-center justify-between w-5/6">
+              <form className="lg:*:flex justify-between gap-2">
+                <div className="flex gap-2 items-center justify-between w-5/6  mb-4 lg:mb-0">
                   <Input
                     placeholder="provaince"
                     className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
                   />
                   <Input
                     placeholder="ville"
-                    className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                    className=" !border-t-blue-gray-200 focus:!border-t-gray-900 hidden lg:block"
                   />
                   <Input
                     placeholder="quartier"
-                    className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                    className=" !border-t-blue-gray-200 focus:!border-t-gray-900 hidden lg:block"
                   />
 
                 </div>
-                <Button variant="outlined" className="flex items-center gap-3">
+                <Button variant="outlined" className="flex justify-between gap-3">
                   Refresh
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

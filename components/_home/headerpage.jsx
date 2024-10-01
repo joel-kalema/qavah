@@ -87,9 +87,9 @@ const Carousel = () => {
                             <div className="des">
                                 Accédez à une large gamme de logements adaptés à vos besoins.
                             </div>
-                            <div className="btn flex gap-4">
-                                <p className='py-2 px-6 bg-[#fff] text-black rounded-3xl text-sm font-extrabold'>See More</p>
-                                <p className="py-2 px-6 bg-[#ad8954] rounded-3xl text-sm text-[#fff] font-extrabold">Subscribe</p>
+                            <div className="btn lg:flex gap-4">
+                                <p className='py-2 px-6 bg-[#fff] inline-block mr-2 lg:mr-0 text-black rounded-3xl text-sm font-extrabold'>See More</p>
+                                <p className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Subscribe</p>
                             </div>
                         </div>
                     </div>
@@ -101,9 +101,9 @@ const Carousel = () => {
                             <div className="des">
                                 Confiez-nous la gestion locative et administrative de vos propriétés.
                             </div>
-                            <div className="btn flex gap-4">
-                                <p className='py-2 px-6 bg-[#fff] text-black rounded-3xl text-sm font-extrabold'>See More</p>
-                                <p className="py-2 px-6 bg-[#ad8954] rounded-3xl text-sm text-[#fff] font-extrabold">Subscribe</p>
+                            <div className="btn lg:flex gap-4">
+                                <p className='py-2 px-6 bg-[#fff] inline-block mr-2 lg:mr-0 text-black rounded-3xl text-sm font-extrabold'>See More</p>
+                                <p className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Subscribe</p>
                             </div>
                         </div>
                     </div>
@@ -115,9 +115,9 @@ const Carousel = () => {
                             <div className="des">
                                 Parcourez une sélection exclusive de terrains prêts à être développés.
                             </div>
-                            <div className="btn flex gap-4">
-                                <p className='py-2 px-6 bg-[#fff] text-black rounded-3xl text-sm font-extrabold'>See More</p>
-                                <p className="py-2 px-6 bg-[#ad8954] rounded-3xl text-sm text-[#fff] font-extrabold">Subscribe</p>
+                            <div className="btn lg:flex gap-4">
+                                <p className='py-2 px-6 bg-[#fff] inline-block mr-2 lg:mr-0 text-black rounded-3xl text-sm font-extrabold'>See More</p>
+                                <p className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Subscribe</p>
                             </div>
                         </div>
                     </div>
@@ -129,9 +129,9 @@ const Carousel = () => {
                             <div className="des">
                                 Bénéficiez d&apos;une gestion transparente et efficace de votre copropriété.
                             </div>
-                            <div className="btn flex gap-4">
-                                <p className='py-2 px-6 bg-[#fff] text-black rounded-3xl text-sm font-extrabold'>See More</p>
-                                <p className="py-2 px-6 bg-[#ad8954] rounded-3xl text-sm text-[#fff] font-extrabold">Subscribe</p>
+                            <div className="btn lg:flex gap-4">
+                                <p className='py-2 px-6 bg-[#fff] inline-block mr-2 lg:mr-0 text-black rounded-3xl text-sm font-extrabold'>See More</p>
+                                <p className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Subscribe</p>
                             </div>
                         </div>
                     </div>
@@ -146,7 +146,7 @@ const Carousel = () => {
 
                 {/* <div className="timeRunning" ref={runningTimeRef}></div> */}
             </div>
-            <div className='w-4/6 mx-auto mt-[-5rem] bg-[#fff] z-40 relative p-4 rounded-2xl drop-shadow-lg mb-10'>
+            <div className='mx-4 lg:w-4/6 lg:mx-auto mt-[-5rem] bg-[#fff] z-40 relative p-2 lg:p-4 rounded-2xl drop-shadow-lg mb-10'>
                 <TabsWithIcon />
             </div>
         </div>

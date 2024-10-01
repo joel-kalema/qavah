@@ -37,9 +37,9 @@ export default function Topbar() {
   }, []);
  
   return (
-    <Navbar fullWidth={true} className="mx-auto w-[100%] px-20 py-4 fixed z-50">
+    <Navbar fullWidth={true} className="mx-auto w-[100%] px-4 lg:px-20 py-4 fixed z-50">
       <div className="flex items-center justify-between text-blue-gray-900">
-      <Image src='/logo.png' height={100} width={200} alt="logo" className='md:w-16 lg:w-28'/>
+      <Image src='/logo.png' height={80} width={100} alt="logo" className='md:w-10 lg:w-28'/>
         <div className="hidden lg:block">
           <NavList />
         </div>

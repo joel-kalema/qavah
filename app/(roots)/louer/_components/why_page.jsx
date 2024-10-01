@@ -10,8 +10,8 @@ import { SiTraefikproxy } from "react-icons/si";
 export default function WhyPage() {
     return (
         <div>
-            <div className=" mx-auto overflow-hidden relative flex w-4/5 my-40 gap-10">
-                <div className="flex w-3/6 h-[70vh] pb-20">
+            <div className="lg:mx-auto overflow-hidden relative lg:flex lg:w-4/5 mx-4 my-40 gap-10">
+                <div className="flex lg:w-3/6 h-[50vh] lg:h-[70vh] pb-20">
                     <div className="overflow-hidden relative h-full w-2/4 rounded-l-3xl">
                         <Image src="/louer1.jpeg" layout="fill" objectFit="cover" alt="bay" quality={60} />
                     </div>
@@ -20,7 +20,7 @@ export default function WhyPage() {
                     </div>
                 </div>
 
-                <div className="w-3/6 pt-10">
+                <div className="lg:w-3/6 pt-10">
                     <h1 className="text-5xl mb-10 text-[#ad8954] font-extrabold">Biens à louer :</h1>
                     <p className="mb-6">Chez Qavah, nous comprenons que trouver le logement idéal est
                         une étape cruciale dans la réalisation de vos projets personnels ou professionnels.
@@ -34,30 +34,30 @@ export default function WhyPage() {
                 </div>
             </div>
 
-            <div className=" bg-[#f3f3f3] py-20">
-            <div className="w-5/6 mx-auto">
-                <h1 className="text-3xl w-3/4 text-center mx-auto mb-20 text-[#ad8954]">Nous mettons à votre disposition une interface intuitive qui vous permet de filtrer facilement les biens en fonction de vos préférences :</h1>
-                <div className="flex gap-5">
-                    <div className="w-1/3 shadow-md py-8 px-6 bg-[#fff] rounded-3xl">
-                        <h1 className="flex gap-4 items-center text-2xl font-extrabold mb-6"><MdOutlineAttachMoney />Budget :</h1>
-                        <p>Trouvez des options correspondant à votre fourchette de prix, qu&apos;il s&apos;agisse d&apos;une location abordable ou d&apos;un bien haut de gamme.</p>
-                    </div>
+            <div className=" bg-[#f3f3f3] py-20 px-4 lg:px-0">
+                <div className="lg:w-5/6 mx-auto">
+                    <h1 className="text-xl lg:text-3xl lg:w-3/4 text-center mx-auto mb-20 text-[#ad8954]">Nous mettons à votre disposition une interface intuitive qui vous permet de filtrer facilement les biens en fonction de vos préférences :</h1>
+                    <div className="lg:flex gap-5">
+                        <div className="lg:w-1/3 mb-6 lg:mb-0 shadow-md py-8 px-6 bg-[#fff] rounded-3xl">
+                            <h1 className="flex gap-4 items-center text-2xl font-extrabold mb-6"><MdOutlineAttachMoney />Budget :</h1>
+                            <p>Trouvez des options correspondant à votre fourchette de prix, qu&apos;il s&apos;agisse d&apos;une location abordable ou d&apos;un bien haut de gamme.</p>
+                        </div>
 
-                    <div className="w-1/3 shadow-md py-8 px-6 bg-[#fff] rounded-3xl">
-                        <h1 className="flex gap-4 items-center text-2xl font-extrabold mb-6"><BsHouseGearFill />Type de bien :</h1>
-                        <p>Sélectionnez des appartements, maisons, studios ou espaces commerciaux selon vos besoins.</p>
-                    </div>
+                        <div className="lg:w-1/3 mb-6 lg:mb-0 shadow-md py-8 px-6 bg-[#fff] rounded-3xl">
+                            <h1 className="flex gap-4 items-center text-2xl font-extrabold mb-6"><BsHouseGearFill />Type de bien :</h1>
+                            <p>Sélectionnez des appartements, maisons, studios ou espaces commerciaux selon vos besoins.</p>
+                        </div>
 
-                    <div className="w-1/3 shadow-md py-8 px-6 bg-[#fff] rounded-3xl">
-                        <h1 className="flex gap-4 items-center text-2xl font-extrabold mb-6"><SiTraefikproxy />Proximité des services :</h1>
-                        <p>Recherchez des biens proches des écoles, des commerces, des centres médicaux, ou des transports publics pour plus de commodité.</p>
+                        <div className="lg:w-1/3 mb-6 lg:mb-0 shadow-md py-8 px-6 bg-[#fff] rounded-3xl">
+                            <h1 className="flex gap-4 items-center text-2xl font-extrabold mb-6"><SiTraefikproxy />Proximité des services :</h1>
+                            <p>Recherchez des biens proches des écoles, des commerces, des centres médicaux, ou des transports publics pour plus de commodité.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <p className="my-28 w-4/6 mx-auto text-2xl text-center">Avec Qavah, la diversité de notre catalogue de biens s&apos;accompagne de la transparence totale des informations. 
-                Chaque annonce est accompagnée de photos détaillées, de plans d&apos;étage, et de descriptions complètes des 
-                caractéristiques, vous offrant ainsi une visibilité maximale avant même de planifier une visite.</p>
+                <p className="mt-28 lg:w-4/6 mx-auto lg:text-2xl text-center">Avec Qavah, la diversité de notre catalogue de biens s&apos;accompagne de la transparence totale des informations.
+                    Chaque annonce est accompagnée de photos détaillées, de plans d&apos;étage, et de descriptions complètes des
+                    caractéristiques, vous offrant ainsi une visibilité maximale avant même de planifier une visite.</p>
             </div>
         </div>
     );

@@ -29,7 +29,7 @@ export const navData = [
     {
         id: 4,
         title: "Vendre",
-        link: "/vendre"
+        link: "/Vendre"
     },
     {
         id: 5,

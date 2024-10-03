@@ -51,7 +51,7 @@ export default function Questions() {
             </AccordionHeader>
             <AccordionBody className="lg:w-5/6">
               Nous proposons une gestion complète incluant la collecte des loyers,
-              l&apos;entretien des propriétés, la gestion des baux, et le suivi des obligations
+              l&apos;entretien des propriétés, la gestion des baux (gestion des contrats de location entre le propriétaire et les locataires.), et le suivi des obligations
               légales. Accédez à notre portail propriétaire pour suivre la gestion de vos biens.
             </AccordionBody>
           </Accordion>

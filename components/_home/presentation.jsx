@@ -9,15 +9,21 @@ import Gallery from './gallery'
 import { BsHouseCheck } from "react-icons/bs";
 import { LuChevronRightCircle } from "react-icons/lu";
 import { IoChevronForwardSharp } from "react-icons/io5";
+import { Prompt } from "next/font/google";
+
+const title = Prompt({
+    subsets: ['latin', 'latin-ext', 'thai', 'vietnamese'],
+    weight: '800'
+})
 
 export default function Presentation() {
     return (
         <div className="">
             <div className="p-4 lg:p-40">
-                <div className="flex flex-col lg:flex-row gap-10 mb-10">
-                    <h1 className="text-3xl lg:text-5xl font-extrabold w-full lg:w-3/6">Vos conseillers immobiliers de confiance</h1>
-                    <p className="w-full lg:w-3/6">Bienvenue sur Qavah Group, votre partenaire pour toutes vos transactions immobilières :
-                        achat, vente, gestion ou location. Notre équipe expérimentée et nos services personnalisés
+                <div className="flex flex-col lg:flex-row gap-4 mb-10">
+                    <h1 className={`${title.className} text-3xl lg:text-5xl font-extrabold w-full lg:w-4/6`}>Vos conseillers immobiliers de confiance</h1>
+                    <p className="w-full lg:w-2/6">Bienvenue sur Qavah Group, votre partenaire pour toutes vos transactions immobilières :
+                        achat, vente, construiction, gestion ou location. Notre équipe expérimentée et nos services personnalisés
                         vous garantissent des démarches simples, sûres et efficaces.</p>
                 </div>
                 <div className="flex flex-col-reverse lg:flex-row gap-4">
@@ -69,7 +75,7 @@ export default function Presentation() {
                 <div className="lg:w-4/6 py-8 lg:py-12 px-4 lg:px-10">
                     <h1 className="text-2xl lg:text-3xl mb-6 font-extrabold">Chez Qavah Group, nous nous efforçons de vous offrir des solutions immobilières qui répondent à vos besoins.</h1>
                     <div className="">
-                        <p className="mb-4">Que vous souhaitiez acheter, vendre, louer ou gérer vos biens, notre expertise et nos services personnalisés vous accompagnent à chaque étape pour garantir la réussite de vos projets immobiliers.</p>
+                        <p className="mb-4">Que vous souhaitiez acheter, vendre, construire, louer ou gérer vos biens, notre expertise et nos services personnalisés vous accompagnent à chaque étape pour garantir la réussite de vos projets immobiliers.</p>
                         <h2 className="text-[#ad8954] mb-4 font-extrabold">Principales Valeurs :</h2>
                         <div className="">
                             <div className="lg:w-2/3 flex items-center gap-10 bg-[#fffaf1] text-black rounded-2xl px-6 py-4 mb-2">

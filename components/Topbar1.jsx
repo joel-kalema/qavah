@@ -98,12 +98,12 @@ const Nav = () => {
                     </div>
                     <div className="">
                         <div>
-                            <Link href="/contact" className="bg-[#333333] mb-4 inline-block font-extrabold text-white px-6 py-2 rounded-3xl shadow-xl">
+                            <Link onClick={navToggle} href="/contact" className="bg-[#333333] mb-4 inline-block font-extrabold text-white px-6 py-2 rounded-3xl shadow-xl">
                                 Contacter
                             </Link>
                         </div>
                         <div className='mb-10'>
-                            <Link href="mailto:contact@qavahgroup.com" className="font-bold text-[#000] text-xl">contact@qavahgroup.com</Link>
+                            <Link onClick={navToggle} href="mailto:contact@qavahgroup.com" className="font-bold text-[#000] text-xl">contact@qavahgroup.com</Link>
                         </div>
                         <Image src='/logo.png' height={80} width={100} alt="logo" className='w-28' />
                     </div>

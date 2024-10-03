@@ -28,7 +28,7 @@ export default function Presentation() {
                     <div className="text-white mb-4 w-5/6">
                         <h1 className={`${title.className} text-2xl lg:text-4xl text-white font-extrabold mb-6`}>Concrétisons votre projet d&apos;achat d&apos;un bien immobilier</h1>
                         <p className="hidden w-[85%] mb-4 md:block">Réalisez votre rêve immobilier avec notre accompagnement personnalisé.
-                            Nous vous guidons à chaque étape pour concrétiser votre projet d'achat.
+                            Nous vous guidons à chaque étape pour concrétiser votre projet d&apos;achat.
                             Ensemble, trouvons le bien idéal qui correspond à vos attentes.</p>
                         <Link href="/contact" className='py-2 px-6 bg-[#ad8954] rounded-3xl text-sm mb-2 font-extrabold'>Contacter</Link>
                     </div>

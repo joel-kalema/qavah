@@ -1,7 +1,6 @@
 'use client'
 import React from 'react';
 import CarouselCustomNavigation from "./_component/caroucelle"
-import { CiCalendarDate } from "react-icons/ci";
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineLogin } from "react-icons/ai";

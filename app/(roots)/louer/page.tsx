@@ -5,24 +5,33 @@ import Link from "next/link";
 import WhyPage from "./_components/why_page";
 import AvisPage from "./_components/avis_page"
 import CarouselCustomNavigation from "./_components/caroucelle"
-import { CiCalendarDate } from "react-icons/ci";
+import { Prompt } from "next/font/google";
+
+const title = Prompt({
+    subsets: ['latin', 'latin-ext', 'thai', 'vietnamese'],
+    weight: '800'
+})
 
 
 export default function Louer() {
     return (
-        <div className="">
-            <div className="h-[70vh] lg:h-[90vh] mb-40 lg:w-11/12 mx-auto overflow-hidden relative rounded-3xl">
+        <div className="pt-10 bg-[#eee]">
+            <div className="md:flex w-5/6 mx-auto justify-between gap-20 pt-20 lg:pt-40 pb-20 items-end">
+                <h1 className={`${title.className} text-4xl lg:text-6xl md:w-2/3 font-extrabold mb-6 md:mb-0`}>Trouvons la location qui vous ressemble&#39;&#39;</h1>
+                <div className="md:w-1/3 text-sm">
+                    <p>Trouvez la location idéale qui correspond à votre style et vos envies.
+                    Des espaces uniques et soigneusement sélectionnés pour vous.
+                    Vivez des expériences authentiques dans un lieu qui vous ressemble.</p>
+                </div>
+            </div>
+            <div className="h-[70vh] lg:h-[70vh] mb-20 md:mb-40 lg:w-5/6 mx-auto overflow-hidden relative rounded-3xl">
                 <Image src="/home3.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
-                <div className="absolute bottom-0 lg:bottom-10  p-4 lg:left-10 lg:flex lg:w-4/6 justify-between items-center gap-10 bg-[#0000006d] backdrop-blur-md rounded-2xl">
-                    <div className="text-white w-5/6">
-                        <h1 className="text-2xl lg:text-4xl text-white font-extrabold mb-6">Trouvons la location qui vous ressemble</h1>
-                        <div className="btn hidden lg:flex justify-between gap-4 p-1 bg-[#ffffff35] rounded-3xl pr-10">
-                            <Link href="/contact" className='py-2 px-6 bg-[#ad8954] rounded-3xl text-sm font-extrabold'>Contacter</Link>
-                            <p className="flex items-center float-right text-[#fff] gap-5 ml-10"><CiCalendarDate className="text-2xl" /> Des espaces adaptés à votre style de vie et à vos besoins</p>
-                        </div>
+                <div className="absolute bottom-0 lg:bottom-10 p-4 lg:left-10 lg:flex lg:w-3/6 justify-between items-center gap-10 bg-[#0000003b] md:bg-[#0000006d] backdrop-blur-sm md:backdrop-blur-md rounded-2xl">
+                    <div className="text-white w-4/6">
+                        <h1 className=" text-white mb-6">Des espaces adaptés à votre style de vie et à vos besoins</h1>
+                        <Link href="/contact" className='inline-block text-white mb-4 py-2 px-6 bg-[#ad8954] rounded-3xl text-sm font-extrabold'>Contacter</Link>
                     </div>
-                    <div className="lg:w-1/6 h-[10rem] flex items-start gap-4">
-                        <Link href="/contact" className='inline-block text-white lg:hidden py-2 px-6 bg-[#ad8954] rounded-3xl text-sm font-extrabold'>Contacter</Link>
+                    <div className="lg:w-2/6 h-[10rem] md:flex items-start gap-4">
                         <CarouselCustomNavigation />
                     </div>
                 </div>

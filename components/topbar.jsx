@@ -44,8 +44,8 @@ export default function Topbar() {
           <NavList />
         </div>
         <div className="hidden gap-4 lg:flex items-center">
-        <Link href="mailto:contact@qavahgroup.com" className="">contact@qavahgroup.com</Link>
-          <Link href="/contact" className="bg-[#ad8954] text-white px-6 py-2 rounded-3xl hover:shadow-xl">
+        <Link href="mailto:contact@qavahgroup.com" className="font-bold">contact@qavahgroup.com</Link>
+          <Link href="/contact" className="bg-[#333333] font-extrabold text-white px-6 py-2 rounded-3xl hover:shadow-xl">
             Contacter
           </Link>
         </div>
@@ -64,8 +64,8 @@ export default function Topbar() {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-        <Link href="mailto:contact@qavahgroup.com" className="">contact@qavahgroup.com</Link>
-          <Link href="/contact" className="bg-[#ad8954] text-white px-6 py-2 rounded-3xl hover:shadow-xl">
+        <Link href="mailto:contact@qavahgroup.com" className="font-bold">contact@qavahgroup.com</Link>
+          <Link href="/contact" className="bg-[#333333] text-white font-extrabold px-6 py-2 rounded-3xl hover:shadow-xl">
             Contacter
           </Link>
         </div>

@@ -34,8 +34,8 @@ export default function Footer() {
                             <Image src='/logo02.png' height={60} width={200} alt="Eleka logo" className='md:w-14 lg:w-40 mb-4' />
                             <div>
                                 <p className="text-sm w-3/4 mb-6 text-[#a4a4a4]">Un agent immobilier vous contactera dans les meilleurs délais</p>
-                                <p className="lg:text-sm w-2/4 mb-1 flex items-center gap-2"><FaPhone className="text-[#ad8954] text-2xl"/> +243981444440</p>
-                                <Link href="mailto:contact@qavahgroup.com" className="lg:text-sm lg:w-2/4 mb-2 flex items-center gap-2"><IoMdMail className="text-[#ad8954] text-2xl"/> contact@qavahgroup.com</Link>
+                                <p className="lg:text-sm w-2/4 mb-1 flex items-center gap-2"><FaPhone className="text-[#ad8954] text-xl"/> +243981444440</p>
+                                <Link href="mailto:contact@qavahgroup.com" className="lg:text-sm lg:w-2/4 mb-2 flex items-center gap-2"><IoMdMail className="text-[#ad8954] text-xl"/> contact@qavahgroup.com</Link>
                                 <div className=" flex border border-[#6c6c6c] p-2 rounded-md">
                                     <div className="w-4/6 text-[#868686] py-1">Écrivez votre email ici</div>
                                     <div className="w-2/6 bg-[#ad8954] rounded-md py-1 px-2 flex justify-between items-center">

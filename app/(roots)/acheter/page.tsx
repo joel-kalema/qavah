@@ -6,36 +6,40 @@ import Offres from './_component/offres';
 import { AiOutlineSend } from "react-icons/ai";
 import Gallery from '@/components/_home/gallery';
 import { AiFillCheckCircle } from "react-icons/ai";
-import { CiCalendarDate } from "react-icons/ci";
 
 import { LuChevronRightCircle } from "react-icons/lu";
 import { IoChevronForwardSharp } from "react-icons/io5";
 import CarouselCustomNavigation from "./_component/caroucelle"
 import { GiSpeedometer } from "react-icons/gi";
 import { RiDoubleQuotesL } from "react-icons/ri";
+import { Prompt } from "next/font/google";
+
+const title = Prompt({
+    subsets: ['latin', 'latin-ext', 'thai', 'vietnamese'],
+    weight: '800'
+})
 
 export default function Presentation() {
     return (
-        <div className="">
-            <div className="h-[70vh] lg:h-[90vh] mb-40 lg:w-11/12 mx-auto overflow-hidden relative rounded-3xl">
+        <div className="pt-20">
+            <div className="h-[70vh] lg:h-[80vh] mb-40 lg:w-11/12 mx-auto overflow-hidden relative rounded-3xl">
                 <Image src="/home2.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
-                <div className="absolute bottom-0 lg:bottom-10  p-4 lg:left-10 lg:flex lg:w-4/6 justify-between items-center gap-10 bg-[#0000006d] backdrop-blur-md rounded-2xl">
-                    <div className="text-white w-5/6">
-                        <h1 className="text-2xl lg:text-4xl text-white font-extrabold mb-6">Concrétisons votre projet d&apos;achat d&apos;un bien immobilier</h1>
-                        <div className="btn hidden lg:flex justify-between gap-4 p-1 bg-[#ffffff35] rounded-3xl pr-10">
-                            <Link href="/contact" className='py-2 px-6 bg-[#ad8954] rounded-3xl text-sm font-extrabold'>Contacter</Link>
-                            <p className="flex items-center float-right text-[#fff] gap-5 ml-10"><CiCalendarDate className="text-2xl" /> Réussissez votre achat immobilier avec Qavah Group</p>
-                        </div>
+                <div className="absolute bottom-0 lg:bottom-10  p-4 lg:left-10 lg:flex lg:w-4/6 justify-between items-center gap-10 bg-[#0000003b] md:bg-[#0000006d] backdrop-blur-sm md:backdrop-blur-md rounded-2xl">
+                    <div className="text-white mb-4 w-5/6">
+                        <h1 className={`${title.className} text-2xl lg:text-4xl text-white font-extrabold mb-6`}>Concrétisons votre projet d&apos;achat d&apos;un bien immobilier</h1>
+                        <p className="hidden w-[85%] mb-4 md:block">Réalisez votre rêve immobilier avec notre accompagnement personnalisé.
+                            Nous vous guidons à chaque étape pour concrétiser votre projet d'achat.
+                            Ensemble, trouvons le bien idéal qui correspond à vos attentes.</p>
+                        <Link href="/contact" className='py-2 px-6 bg-[#ad8954] rounded-3xl text-sm mb-2 font-extrabold'>Contacter</Link>
                     </div>
-                    <div className="lg:w-1/6 h-[10rem] flex items-start gap-4">
-                        <Link href="/contact" className='inline-block text-white lg:hidden py-2 px-6 bg-[#ad8954] rounded-3xl text-sm font-extrabold'>Contacter</Link>
+                    <div className="lg:w-2/6 h-[10rem] md:h-[12rem] md:flex items-start gap-4">
                         <CarouselCustomNavigation />
                     </div>
                 </div>
             </div>
             <div className="px-4 lg:px-40">
                 <div className="lg:flex gap-10 mb-20">
-                    <h1 className="text-3xl lg:text-5xl font-extrabold lg:w-3/6 mb-4 lg:mb-0">Réussissez votre achat immobilier avec Qavah Group</h1>
+                    <h1 className={`${title.className} text-3xl lg:text-5xl font-extrabold lg:w-3/6 mb-4 lg:mb-0`}>Réussissez votre achat immobilier avec Qavah Group</h1>
                     <p className="lg:w-3/6">Chacun possède une bonne raison pour acheter un appartement ou une maison :
                         votre famille qui s&apos;agrandit, une nouvelle carrière qui commence, un projet de vie qui aboutit…
                         Nous vous proposons dans votre ville et votre quartier la sélection de biens qui donneront vie à votre projet.</p>
@@ -76,7 +80,7 @@ export default function Presentation() {
                 <div className="flex flex-col-reverse lg:flex-row mx-auto gap-6 lg:gap-20">
                     <div className="lg:w-3/6">
                         <div>
-                            <h1 className="text-4xl font-extrabold mb-4">Pourquoi choisir Qavah pour l&apos;achat de vos terrains ?</h1>
+                            <h1 className={`${title.className} text-4xl font-extrabold mb-4`}>Pourquoi choisir Qavah pour l&apos;achat de vos terrains ?</h1>
                             <div className="mb-4">
                                 <h1 className="flex gap-2 items-start lg:items-center font-bold text-xl mb-2"><AiFillCheckCircle className="text-[#ad8954]" />Un réseau étendu de partenaires locaux : </h1>
                                 <p className="ml-6">Nos relations avec des promoteurs, des agences gouvernementales et des partenaires fonciers nous permettent d&apos;avoir accès à des terrains exclusifs avant même qu&apos;ils n&apos;arrivent sur le marché.</p>

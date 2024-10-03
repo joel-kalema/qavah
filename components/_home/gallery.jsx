@@ -1,11 +1,18 @@
 'use client'
 
+import { Prompt } from "next/font/google";
+
+const title = Prompt({
+    subsets: ['latin', 'latin-ext', 'thai', 'vietnamese'],
+    weight: '800'
+})
+
 import Image from "next/image";
 export default function Gallery() {
     return (
         <div className="lg:w-5/6 mx-auto px-4 lg:px-10 py-20 lg:py-40">
             <div className="lg:flex gap-10 mb-16">
-                <h1 className="text-3xl lg:text-5xl font-extrabold lg:w-3/6 mb-2 lg:mb-0">Découvrez votre propriété idéale</h1>
+                <h1 className={`${title.className} text-3xl lg:text-5xl font-extrabold lg:w-3/6 mb-2 lg:mb-0`}>Découvrez votre propriété idéale</h1>
                 <p className="lg:w-3/6">Embarquez pour un voyage de découverte à travers des collections 
                 exclusives de maisons, de propriétés de luxe pour répondre à vos aspirations et inspirer votre imagination</p>
             </div>

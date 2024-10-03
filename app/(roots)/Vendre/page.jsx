@@ -39,7 +39,7 @@ const Vendre = () => {
                 </div>
             </div>
 
-            <div className="flex lg:w-4/5 mx-auto">
+            <div className="flex lg:w-4/5 mx-auto px-4 md:px-0">
                 <div className="flex mx-auto gap-10 rounded-xl flex-col-reverse lg:flex-row">
                     <div className="lg:w-3/6 lg:p-6">
                         <h1 className='text-4xl hidden md:block font-extrabold mb-10'>Confiez votre vente à une équipe experte de vos quartiers</h1>
@@ -83,7 +83,7 @@ const Vendre = () => {
                 </div>
             </div>
 
-            <div className='w-4/5 mx-auto'>
+            <div className='w-4/5  mx-auto mb-10'>
                 <h1 className='text-4xl font-extrabold mb-6'>Votre satisfaction, notre priorité</h1>
                 <p>Nous comprenons que la vente d&apos;un bien immobilier est une décision importante. C&apos;est pourquoi nous nous engageons à vous offrir un service sur mesure, transparent et efficace, afin de vous garantir une vente réussie, en toute sérénité.</p>
             </div>

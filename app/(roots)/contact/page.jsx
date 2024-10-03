@@ -1,7 +1,6 @@
 'use client'
 import React from 'react';
 import {
-    Card,
     Input,
     Button
 } from "@material-tailwind/react";
@@ -44,13 +43,11 @@ const Contact = () => {
         <div className="">
             <div className="pt-20 lg:pt-40 w-5/6 mx-auto">
                 <h1 className="text-3xl lg:text-4xl font-extrabold my-10 lg:w-3/4 text-center mx-auto">Demander des informations pour acheter un logement avec QAVAH Group</h1>
-                <div className="flex items-center">
-                    <div className="w-2/4 min-h-[60dvh] hidden lg:block relative rounded-3xl p-10 overflow-hidden">
+                <div className="flex items-center justify-between">
+                    <div className="lg:w-2/4 h-[60dvh] hidden lg:block relative rounded-3xl p-10 overflow-hidden">
                         <Image src="/contact.jpeg" layout="fill" objectFit="cover" alt="bay" quality={90} />
                     </div>
-                    <div className="flex lg:w-2/4 ">
-                        <Card color="transparent" bclassName="ml-10" shadow={false}>
-                            <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 bg-white rounded-xl p-4 shadow-md " onSubmit={(e) => handleSubmit(e)}>
+                            <form className="mt-8 mb-2 w-[100%] lg:w-2/4 mx-auto bg-white rounded-xl p-4 shadow-md " onSubmit={(e) => handleSubmit(e)}>
                                 <div className="mb-1 flex flex-col gap-6">
                                     <Input variant="outlined" label="Prénom" placeholder="Prénom" type="text" name="Prenom" />
                                     <Input variant="outlined" label="Nom" placeholder="Nom" type="text" name="Nom" />
@@ -63,8 +60,7 @@ const Contact = () => {
                                     Contacter
                                 </Button>
                             </form>
-                        </Card>
-                    </div>
+            
                 </div>
                 <p className='text-center py-10 lg:py-20 text-3xl'>Ensemble avec vous à chaque pas.</p>
             </div>

@@ -15,7 +15,7 @@ const currentYear = new Date().getFullYear();
 
 export default function Footer() {
     return (
-        <div className="bg-[#2c2c2c] text-[#fff] pt-12 rounded-t-3xl lg:rounded-[2rem] relative z-20 lg:m-8 p-4">
+        <div className="bg-[#2c2c2c] text-[#fff] pt-12 lg:rounded-t-3xl lg:rounded-[2rem] relative z-20 lg:m-8 p-4">
             <div className="lg:w-5/6 mx-auto pb-14 lg:flex justify-between items-center">
                 <div className="mb-6 lg:mb-0">
                     <h1 className="text-4xl lg:text-6xl mb-4">Prêt à travailler avec nous?</h1>

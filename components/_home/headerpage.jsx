@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import TabsWithIcon from './searchtabs'
+import Link from 'next/link';
 
 const Carousel = () => {
     const carouselRef = useRef(null);
@@ -88,8 +89,7 @@ const Carousel = () => {
                                 Accédez à une large gamme de logements adaptés à vos besoins.
                             </div>
                             <div className="btn lg:flex gap-4">
-                                <p className='py-2 px-6 bg-[#fff] inline-block mr-2 lg:mr-0 text-black rounded-3xl text-sm font-extrabold'>See More</p>
-                                <p className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Subscribe</p>
+                            <Link href='/contact' className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Contact</Link>
                             </div>
                         </div>
                     </div>
@@ -97,13 +97,11 @@ const Carousel = () => {
                     <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/bien.jpeg")' }}>
                         <div className="content">
                             <div className="title">Gérez vos biens en toute sérénité</div>
-                            {/* <div className="name">OWL</div> */}
                             <div className="des">
                                 Confiez-nous la gestion locative et administrative de vos propriétés.
                             </div>
                             <div className="btn lg:flex gap-4">
-                                <p className='py-2 px-6 bg-[#fff] inline-block mr-2 lg:mr-0 text-black rounded-3xl text-sm font-extrabold'>See More</p>
-                                <p className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Subscribe</p>
+                                <Link href='/contact' className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Contact</Link>
                             </div>
                         </div>
                     </div>
@@ -111,13 +109,11 @@ const Carousel = () => {
                     <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/plot1.jpeg")' }}>
                         <div className="content">
                             <div className="title">Explorez nos terrains disponibles</div>
-                            {/* <div className="name">CROW</div> */}
                             <div className="des">
                                 Parcourez une sélection exclusive de terrains prêts à être développés.
                             </div>
-                            <div className="btn lg:flex gap-4">
-                                <p className='py-2 px-6 bg-[#fff] inline-block mr-2 lg:mr-0 text-black rounded-3xl text-sm font-extrabold'>See More</p>
-                                <p className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Subscribe</p>
+                            <div className="btn lg:flex flex-col gap-4">
+                            <Link href='/contact' className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Contact</Link>
                             </div>
                         </div>
                     </div>
@@ -125,13 +121,11 @@ const Carousel = () => {
                     <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/home3.jpeg")' }}>
                         <div className="content">
                             <div className="title">Découvrez notre offre de syndic de copropriété</div>
-                            {/* <div className="name">CROW</div> */}
                             <div className="des">
                                 Bénéficiez d&apos;une gestion transparente et efficace de votre copropriété.
                             </div>
-                            <div className="btn lg:flex gap-4">
-                                <p className='py-2 px-6 bg-[#fff] inline-block mr-2 lg:mr-0 text-black rounded-3xl text-sm font-extrabold'>See More</p>
-                                <p className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Subscribe</p>
+                            <div className="btn lg:flex flex-col gap-4">
+                            <Link href='/contact' className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Contact</Link>
                             </div>
                         </div>
                     </div>
@@ -146,7 +140,7 @@ const Carousel = () => {
 
                 {/* <div className="timeRunning" ref={runningTimeRef}></div> */}
             </div>
-            <div className='mx-4 lg:w-4/6 lg:mx-auto mt-[-5rem] bg-[#fff] z-40 relative p-2 lg:p-4 rounded-2xl drop-shadow-lg mb-10'>
+            <div className='lg:w-4/6 lg:mx-auto mt-[-5rem] bg-[#fff] z-40 relative p-2 lg:p-4 rounded-2xl drop-shadow-lg mb-10'>
                 <TabsWithIcon />
             </div>
         </div>

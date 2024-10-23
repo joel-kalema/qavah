@@ -21,7 +21,7 @@ const title = Prompt({
 
 export default function Presentation() {
     return (
-        <div className="pt-20">
+        <div className="pt-24">
             <div className="h-[70vh] lg:h-[80vh] mb-40 lg:w-11/12 mx-auto overflow-hidden relative rounded-3xl">
                 <Image src="/home2.jpeg" layout="fill" objectFit="cover" alt="bay" quality={100} />
                 <div className="absolute bottom-0 lg:bottom-10  p-4 lg:left-10 lg:flex lg:w-4/6 justify-between items-center gap-10 bg-[#0000003b] md:bg-[#0000006d] backdrop-blur-sm md:backdrop-blur-md rounded-2xl">

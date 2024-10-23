@@ -1,91 +1,104 @@
-import React from "react";
-import {
-  Tabs,
-  TabsHeader,
-  TabsBody,
-  Tab,
-  TabPanel,
-} from "@material-tailwind/react";
-import {
-  Square3Stack3DIcon,
-  UserCircleIcon,
-  Cog6ToothIcon,
-} from "@heroicons/react/24/solid";
+'use client'
 
-import {
-  Card,
-} from "@material-tailwind/react";
-import { RiSearchLine } from "react-icons/ri";
+import React from "react";
+import { useState } from "react";
+import { BsHouseGear } from "react-icons/bs";
+import { IoSearch } from "react-icons/io5";
+import { MdLocationOn } from "react-icons/md";
+import { FaAngleDown } from "react-icons/fa6";
 
 export default function TabsWithIcon() {
-  const data = [
-    {
-      label: "Acheter",
-      value: "acheter",
-      icon: Square3Stack3DIcon,
-      desc: `It really matters and then like it really doesn't matter.
-      What matters is the people who are sparked by it. And the people
-      who are like offended by it, it doesn't matter.`,
-    },
-    {
-      label: "Investir",
-      value: "investir",
-      icon: UserCircleIcon,
-      desc: `Because it's about motivating the doers. Because I'm here
-      to follow my dreams and inspire other people to follow their dreams, too.`,
-    },
-    {
-      label: "Louer",
-      value: "louer",
-      icon: Cog6ToothIcon,
-      desc: `We're not always in the position that we want to be at.
-      We're constantly growing. We're constantly making mistakes. We're
-      constantly trying to express ourselves and actualize our dreams.`,
-    },
+  const [selectedtype, setSelectedType] = useState('');
+  const [selectedcity, setSelectedCity] = useState('');
+  const [opentype, setOpenType] = useState(false);
+  const [opencity, setOpenCity] = useState(false);
+
+  const type = [
+    { label: 'Maison', value: 'maison' },
+    { label: 'Parcelle', value: 'parcelle' },
   ];
+
+  const Location = [
+    { label: 'Kinshasa', value: 'kinshasa' },
+    { label: 'Lubumbashi', value: 'lubumbashi' },
+    { label: 'Kolwezi', value: 'kolwezi' }
+  ];
+
+  const handleOptionClick = (value) => {
+    setSelectedType(value);
+    setOpenType(false); // Close dropdown on selection
+  };
+
+  const toggleDropdown = () => {
+    setOpenType((prev) => !prev);
+  };
+
+  const handleCityChange = (value) => {
+    setSelectedCity(value);
+    setOpenCity(false)
+  };
+
+  const toggleDropdownCity = () => {
+    setOpenCity((prev) => !prev);
+  };
+
   return (
-    <Tabs value="acheter">
-      <TabsHeader>
-        {data.map(({ label, value, icon }) => (
-          <Tab key={value} value={value}>
-            <div className="flex items-center gap-2">
-              {React.createElement(icon, { className: "w-5 h-5" })}
-              {label}
-            </div>
-          </Tab>
-        ))}
-      </TabsHeader>
-      <TabsBody>
-        {data.map(({ value }) => (
-          <TabPanel key={value} value={value}>
-            <Card color="transparent" shadow={false}>
-              <form className="">
-                <div className="flex items-center justify-between gap-5 mb-4 lg:mb-0">
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="provaince"
-                    required
-                    className="w-[95%] md:w-[48%] px-3 py-2 border-b border-b-[#ad8954] outline-none text-[#3b3b3b] placeholder-[#979797]"
-                  />
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="ville"
-                    required
-                    className="w-[48%] hidden md:block p-2 md:px-3 md:py-2 border-b border-b-[#ad8954] outline-none text-[#3b3b3b] placeholder-[#a0a0a0]"
-                  />
-                  
-                  <RiSearchLine className="text-3xl w-[4%]"/>
-            
+    <div className=" w-5/6 flex justify-between lg:w-4/6 lg:mx-auto mt-[-3rem] bg-[#fff] z-40 relative p-2 lg:p-4 rounded-[4rem] drop-shadow-lg mb-10">
+      <div className="flex items-center gap-6 w-1/4 pr-2">
+
+        <div className="flex justify-center items-center  p-3 rounded-[50%] border-2 border-[#ad8954] text-[#ad8954]">
+          <BsHouseGear className="text-3xl" />
+        </div>
+
+        <div className="relative inline-block w-[100%]">
+          <button onClick={toggleDropdown}
+            className="w-full bg-white rounded-md focus:outline-none flex items-center gap-5"
+          >
+            {selectedtype ? type.find((option) => option.value === selectedtype).label : 'Type'}
+            <FaAngleDown />
+          </button>
+          {opentype && (
+            <div className="absolute z-10 mt-4 w-full bg-white border border-gray-300 rounded-md shadow-lg" style={{ position: 'absolute' }}>
+              {type.map((option) => (
+                <div key={option.value} onClick={() => handleOptionClick(option.value)}
+                  className="p-2 hover:bg-[#ad8954] hover:text-[#fff] cursor-pointer text-black"
+                >
+                  {option.label}
                 </div>
-              </form>
-            </Card>
-          </TabPanel>
-        ))}
-      </TabsBody>
-    </Tabs>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div className="flex items-center gap-6 w-1/4 border-l-2 px-4">
+
+        <div className="flex justify-center items-center  p-3 rounded-[50%] border-2 border-[#ad8954] text-[#ad8954]">
+          <MdLocationOn className="text-3xl" />
+        </div>
+
+        <div className="relative inline-block w-[100%]">
+          <button onClick={toggleDropdownCity} className="w-full bg-white rounded-md focus:outline-none flex items-center gap-5">
+            {selectedcity ? Location.find((option) => option.value === selectedcity).label : 'Ville'}
+            <FaAngleDown />
+          </button>
+          {opencity && (
+            <div className="absolute z-10 mt-4 w-full bg-white border border-gray-300 rounded-md shadow-lg" style={{ position: 'absolute' }}>
+              {Location.map((option) => (
+                <div key={option.value} onClick={() => handleCityChange(option.value)}
+                  className="p-2 hover:bg-[#ad8954] hover:text-[#fff] cursor-pointer text-black">
+                  {option.label}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+      </div>
+
+      <div className="w-1/4 bg-[#ad8954] cursor-pointer text-white rounded-[4rem] py-2 px-6 flex justify-between items-center">
+        Rechercher <IoSearch />
+      </div>
+    </div>
   );
 }

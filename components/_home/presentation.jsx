@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import TabsWithIcon from './searchtabs'
 import { AiOutlineSend } from "react-icons/ai";
 import { GrCertificate } from "react-icons/gr";
 import Gallery from './gallery'
@@ -19,6 +20,9 @@ const title = Prompt({
 export default function Presentation() {
     return (
         <div className="">
+            <div className=''>
+                <TabsWithIcon />
+            </div>
             <div className="p-4 lg:p-40">
                 <div className="flex flex-col lg:flex-row gap-4 mb-10">
                     <h1 className={`${title.className} text-3xl lg:text-5xl font-extrabold w-full lg:w-4/6`}>Vos conseillers immobiliers de confiance</h1>

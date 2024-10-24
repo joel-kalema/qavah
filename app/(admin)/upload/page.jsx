@@ -75,10 +75,11 @@ export default function AddItem() {
                 {/* Image upload */}
                 <div className='my-16'>
                     <h2 className='mb-10 text-2xl font-extrabold'>Ajouter des Images (3 au max)</h2>
-                    {ImageInput.map((item) => (
+                    {ImageInput.map((item, index) => (
                         <div className='flex items-center gap-4 mb-4 border-dashed border-2 w-2/4 rounded-2xl p-4'>
                             <AiFillPicture className='text-3xl text-[#ad8954]' />
                             <input
+                                key={index}
                                 type="file"
                                 onChange={item}
                                 accept="image/*"
@@ -103,8 +104,9 @@ export default function AddItem() {
                 {/* Location as radio buttons */}
                 <div className='my-6'>
                     <h2 className='my-4 text-2xl font-extrabold'>Sélectionner la ville</h2>
-                    {villeInput.map((item) => (
+                    {villeInput.map((item, index) => (
                         <Radio
+                            key={index}
                             label={item}
                             name="location"
                             value={item}
@@ -118,15 +120,16 @@ export default function AddItem() {
                 {/* Type as radio buttons */}
                 <div>
                     <h2 className='my-4 text-2xl font-extrabold'>Sélectionner le Type</h2>
-                    {Type.map((item) => (
+                    {Type.map((item, index) => (
                         <Radio
-                        label={item}
-                        name="type"
-                        value={item}
-                        checked={type === item}
-                        onChange={(e) => setType(e.target.value)}
-                        required
-                    />
+                            key={index}
+                            label={item}
+                            name="type"
+                            value={item}
+                            checked={type === item}
+                            onChange={(e) => setType(e.target.value)}
+                            required
+                        />
                     ))}
                 </div>
 
@@ -145,8 +148,8 @@ export default function AddItem() {
                             value={price}
                             onChange={(e) => setPrice(e.target.value)}
                             className="!border-t-blue-gray-200 placeholder:text-blue-gray-300 placeholder:opacity-100  focus:!border-t-gray-900 appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                            labelProps={{ className: "before:content-none after:content-none",}}
-                            containerProps={{className: "min-w-0",}}
+                            labelProps={{ className: "before:content-none after:content-none", }}
+                            containerProps={{ className: "min-w-0", }}
                         />
                         <div className="absolute right-1 top-1 flex gap-0.5">
                             <IconButton
@@ -180,7 +183,7 @@ export default function AddItem() {
                         </div>
                     </div>
                     <Typography variant="small" color="gray" className="mt-2 font-normal">
-                        Ajustez le nombre à l'aide des commandes + et -.
+                        Ajustez le nombre à l&apos;aide des commandes + et -.
                     </Typography>
                 </div>
 
@@ -238,7 +241,7 @@ export default function AddItem() {
                         </div>
                     </div>
                     <Typography variant="small" color="gray" className="mt-2 font-normal">
-                        Ajustez le nombre à l'aide des commandes + et -.
+                        Ajustez le nombre à l&apos;aide des commandes + et -.
                     </Typography>
                 </div>
 

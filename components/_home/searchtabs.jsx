@@ -1,98 +1,161 @@
 'use client';
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { BsHouseGear } from "react-icons/bs";
 import { IoSearch } from "react-icons/io5";
 import { MdLocationOn } from "react-icons/md";
-import { Select, Option } from "@material-tailwind/react";
+import { Select, Option, Card, CardHeader, CardBody, Typography, Carousel } from "@material-tailwind/react";
+import { FaBed, FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
 import { getItems } from '../../firebase/firebase';
+import CardPlacehoderSkeleton from "../previewCard";
+
+const FilterForm = ({ ville, setVille, type, setType, handleSubmit, villeInput, Type }) => (
+  <form onSubmit={handleSubmit} className="w-5/6 lg:w-4/6 lg:mx-auto mt-[-3rem] bg-[#fff] relative z-40 p-2 lg:p-4 rounded-[4rem] drop-shadow-lg mb-10 flex justify-between">
+    <FilterOption icon={BsHouseGear} label="Sélectionner la ville" value={ville} setValue={setVille} options={["Tout", ...villeInput]} />
+    <FilterOption icon={MdLocationOn} label="Sélectionner le Type" value={type} setValue={setType} options={["Tout", ...Type]} />
+    <SearchButton />
+  </form>
+);
+
+const FilterOption = ({ icon: Icon, label, value, setValue, options }) => (
+  <div className="flex items-center gap-6 w-1/4 pr-2 px-4">
+    <div className="flex justify-center items-center p-3 rounded-[50%] border-2 border-[#ad8954] text-[#ad8954]">
+      <Icon className="text-3xl" />
+    </div>
+    <div className="w-72">
+      <Select label={label} onChange={setValue} value={value}>
+        {options.map((option, index) => (
+          <Option key={index} value={option}>{option}</Option>
+        ))}
+      </Select>
+    </div>
+  </div>
+);
+
+const SearchButton = () => (
+  <button type="submit" className="w-1/4 bg-[#ad8954] cursor-pointer text-white rounded-[4rem] py-2 px-6 flex justify-between items-center">
+    Rechercher <IoSearch />
+  </button>
+);
+
+const ItemCard = ({ item, index }) => (
+  <Card className="mt-6 w-96 border z-0">
+    <CardHeader shadow={false} floated={false} className="relative grid h-56 place-items-center bg-gray-300">
+      <Carousel
+        className="rounded-xl"
+        autoplay={true}
+        autoplayDelay={2000 + (index * 100)}
+        loop={true}
+        prevArrow={false}
+        nextArrow={false}
+        navigation={({ setActiveIndex, activeIndex, length }) => (
+          <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+            {new Array(length).fill("").map((_, i) => (
+              <span
+                key={i}
+                className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+                  }`}
+                onClick={() => setActiveIndex(i)}
+              />
+            ))}
+          </div>
+        )}
+      >
+        {item.images.map((img, i) => (
+          <img key={i} src={img} alt={`item ${i}`} className="h-full w-full object-cover" />
+        ))}
+      </Carousel>
+    </CardHeader>
+    <CardBody>
+      <div className="flex justify-between">
+        <Typography className="font-bold">{item.type}</Typography>
+        <Typography className="font-extrabold">$ {item.price}</Typography>
+      </div>
+      <Typography className="text-sm my-4">{item.detail.substring(0, 60)}</Typography>
+      <div className="flex gap-3">
+        <Typography className="border rounded-lg flex gap-2 items-center px-1 text-sm">
+          <FaBed />{item.rooms}
+        </Typography>
+        <Typography className="border rounded-lg flex gap-2 items-center px-1 text-sm">
+          <MdLocationOn />{item.location}
+        </Typography>
+      </div>
+    </CardBody>
+  </Card>
+);
 
 export default function TabsWithIcon() {
   const [ville, setVille] = useState('');
   const [type, setType] = useState('');
   const [filteredItems, setFilteredItems] = useState([]);
   const [allItems, setAllItems] = useState([]);
+  const [click, setClick] = useState(false);
 
   const villeInput = ["Kinshasa", "Lubumbashi", "Kolwezi", "Matadi", "Goma", "Bukavu"];
   const Type = ["Parcelle", "Appartement"];
 
   useEffect(() => {
-    async function fetchItems() {
+    const fetchItems = async () => {
       try {
         const data = await getItems();
-        console.log("Fetched items:", data);
         setAllItems(data);
       } catch (error) {
         console.error("Error fetching items:", error);
       }
-    }
+    };
     fetchItems();
   }, []);
 
-  const handleFilter = (e) => {
+  const handleFilter = useCallback((e) => {
     e.preventDefault();
-    const filtered = allItems.filter(item => {
-      const matchesVille = ville ? item.location === ville : true;
-      const matchesType = type ? item.type && item.type.toLowerCase() === type.toLowerCase() : true;
-      return matchesVille && matchesType;
-    });
-    setFilteredItems(filtered); 
-  };
+    const filtered = allItems.filter(item =>
+      (ville !== 'Tout' ? item.location === ville : true) &&
+      (type !== 'Tout' ? item.type?.toLowerCase() === type.toLowerCase() : true) 
+    );
+    setFilteredItems(filtered);
+    setClick(true);
+
+    setVille('');
+    setType('');
+  }, [ville, type, allItems]);
+
+  const filteredContent = useMemo(() => {
+    if (click && filteredItems.length === 0) {
+      return <p className="text-center text-gray-500">Aucun élément trouvé</p>;
+    }
+    return filteredItems.length > 0 ? (
+      filteredItems.map((item, index) => <ItemCard key={item.id} item={item} index={index} />)
+    ) : (
+      allItems.length > 0 ? (
+        allItems.slice(0, 3).map((item, index) => <ItemCard key={item.id} item={item} index={index} />)
+      ) : (
+        <div className='w-[100%] flex gap-8'>
+          <CardPlacehoderSkeleton />
+          <CardPlacehoderSkeleton />
+          <CardPlacehoderSkeleton />
+        </div>
+      )
+    );
+  }, [click, filteredItems, allItems]);
 
   return (
     <div>
-      <form onSubmit={handleFilter} className=" w-5/6 flex justify-between lg:w-4/6 lg:mx-auto mt-[-3rem] bg-[#fff] z-40 relative p-2 lg:p-4 rounded-[4rem] drop-shadow-lg mb-10">
-        <div className="flex items-center gap-6 w-1/4 pr-2">
-          <div className="flex justify-center items-center p-3 rounded-[50%] border-2 border-[#ad8954] text-[#ad8954]">
-            <BsHouseGear className="text-3xl" />
-          </div>
-          <div className="w-72">
-            <Select label="Sélectionner la ville" onChange={(e) => setVille(e)} value={ville}>
-              {villeInput.map((option, index) => (
-                <Option key={index} value={option}>{option}</Option>
-              ))}
-            </Select>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-6 w-1/4 border-l-2 px-4">
-          <div className="flex justify-center items-center p-3 rounded-[50%] border-2 border-[#ad8954] text-[#ad8954]">
-            <MdLocationOn className="text-3xl" />
-          </div>
-          <div className="w-72">
-            <Select label="Sélectionner le Type" onChange={(e) => setType(e)} value={type}>
-              {Type.map((option, index) => (
-                <Option key={index} value={option}>{option}</Option>
-              ))}
-            </Select>
-          </div>
-        </div>
-
-        <button type="submit" className="w-1/4 bg-[#ad8954] cursor-pointer text-white rounded-[4rem] py-2 px-6 flex justify-between items-center">
-          Rechercher <IoSearch />
-        </button>
-      </form>
-
-      {/* Display filtered items */}
-      <div className='w-5/6 mx-auto'>
-        {filteredItems.length > 0 ? (
-          filteredItems.map((item) => (
-            <div key={item.id} className="mb-6 border p-4 rounded-lg shadow-lg">
-              <h2 className="text-xl font-bold">{item.location}</h2>
-              <p>Type: {item.type}</p>
-              <p>Price: {item.price}</p>
-              <p>Rooms: {item.rooms}</p>
-              <div className="flex gap-4">
-                {item.images.map((url, index) => (
-                  <img key={index} src={url} alt={`Item Image ${index + 1}`} width="150" />
-                ))}
-              </div>
-            </div>
-          ))
-        ) : (
-          <p className="text-center text-gray-500">Aucun élément trouvé</p>
-        )}
+      <FilterForm
+        ville={ville}
+        setVille={setVille}
+        type={type}
+        setType={setType}
+        handleSubmit={handleFilter}
+        villeInput={villeInput}
+        Type={Type}
+      />
+      <div className='w-5/6 mx-auto p-4 flex gap-8'>
+        {filteredContent}
       </div>
+      <Link href='List' className="font-extrabold w-5/6 mx-auto text-xl md:text-2xl my-10 flex gap-2 hover:gap-3 items-center text-[#ad8954c9] hover:text-[#ad8954] transition-all duration-300">
+        Découvrez davantage de nos offres <FaArrowRight />
+      </Link>
     </div>
   );
 }

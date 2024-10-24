@@ -5,10 +5,17 @@ import { BsHouseGear } from "react-icons/bs";
 import { IoSearch } from "react-icons/io5";
 import { MdLocationOn } from "react-icons/md";
 import { Select, Option, Card, CardHeader, CardBody, Typography, Carousel } from "@material-tailwind/react";
-import { FaBed, FaArrowRight } from "react-icons/fa";
-import Link from "next/link";
-import { getItems } from '../../firebase/firebase';
-import CardPlacehoderSkeleton from "../previewCard";
+import { FaBed } from "react-icons/fa";
+// import Link from "next/link";
+import Image from "next/image";
+import { getItems } from '@/firebase/firebase';
+import CardPlacehoderSkeleton from "@/components/previewCard";
+import { Prompt } from "next/font/google";
+
+const title = Prompt({
+  subsets: ['latin', 'latin-ext', 'thai', 'vietnamese'],
+  weight: '800'
+});
 
 const FilterForm = ({ ville, setVille, type, setType, handleSubmit, villeInput, Type }) => (
   <form onSubmit={handleSubmit} className="w-5/6 lg:w-4/6 lg:mx-auto mt-[-3rem] bg-[#fff] relative z-40 p-2 lg:p-4 rounded-[4rem] drop-shadow-lg mb-10 flex justify-between">
@@ -20,7 +27,7 @@ const FilterForm = ({ ville, setVille, type, setType, handleSubmit, villeInput, 
 
 const FilterOption = ({ icon: Icon, label, value, setValue, options }) => (
   <div className="flex items-center gap-6 w-1/4 pr-2 px-4">
-    <div className="flex justify-center items-center p-3 rounded-[50%] border-2 border-[#ad8954] text-[#ad8954]">
+    <div className="flex justify-center items-center p-3 rounded-full border-2 border-[#ad8954] text-[#ad8954]">
       <Icon className="text-3xl" />
     </div>
     <div className="w-72">
@@ -34,7 +41,7 @@ const FilterOption = ({ icon: Icon, label, value, setValue, options }) => (
 );
 
 const SearchButton = () => (
-  <button type="submit" className="w-1/4 bg-[#ad8954] cursor-pointer text-white rounded-[4rem] py-2 px-6 flex justify-between items-center">
+  <button type="submit" className="w-1/4 bg-[#ad8954] rounded-[4rem] cursor-pointer text-white rounded-4xl py-2 px-6 flex justify-between items-center">
     Rechercher <IoSearch />
   </button>
 );
@@ -85,6 +92,7 @@ const ItemCard = ({ item, index }) => (
   </Card>
 );
 
+// Main Component
 export default function TabsWithIcon() {
   const [ville, setVille] = useState('');
   const [type, setType] = useState('');
@@ -110,8 +118,8 @@ export default function TabsWithIcon() {
   const handleFilter = useCallback((e) => {
     e.preventDefault();
     const filtered = allItems.filter(item =>
-      (ville !== 'Tout' ? item.location === ville : true) &&
-      (type !== 'Tout' ? item.type?.toLowerCase() === type.toLowerCase() : true) 
+      (ville !== 'Tout' ? item.location === ville : true) && // Filter by ville unless "All" is selected
+      (type !== 'Tout' ? item.type?.toLowerCase() === type.toLowerCase() : true) // Filter by type unless "All" is selected
     );
     setFilteredItems(filtered);
     setClick(true);
@@ -128,7 +136,7 @@ export default function TabsWithIcon() {
       filteredItems.map((item, index) => <ItemCard key={item.id} item={item} index={index} />)
     ) : (
       allItems.length > 0 ? (
-        allItems.slice(0, 3).map((item, index) => <ItemCard key={item.id} item={item} index={index} />)
+        allItems.map((item, index) => <ItemCard key={item.id} item={item} index={index} />)
       ) : (
         <div className='w-[100%] flex gap-8'>
           <CardPlacehoderSkeleton />
@@ -140,7 +148,25 @@ export default function TabsWithIcon() {
   }, [click, filteredItems, allItems]);
 
   return (
-    <div>
+    <div className='pt-40'>
+      <div className='w-5/6 mx-auto'>
+        <h1 className={`${title.className} text-4xl lg:text-6xl md:w-2/3 font-extrabold mb-4 md:mb-0`}>
+          List des Produits Disponible
+        </h1>
+        <p className="hidden w-[85%] mb-4 md:block">
+          Nous traiterons votre demande dans les plus brefs délais.
+        </p>
+      </div>
+      <div className="h-[30vh] lg:h-[30vh] overflow-hidden relative rounded-3xl mx-10">
+        <Image
+          src="/home3.jpeg"
+          layout="fill"
+          objectFit="cover"
+          alt="Beautiful bay view"
+          quality={100}
+          priority
+        />
+      </div>
       <FilterForm
         ville={ville}
         setVille={setVille}
@@ -153,9 +179,6 @@ export default function TabsWithIcon() {
       <div className='w-5/6 mx-auto p-4 flex gap-8'>
         {filteredContent}
       </div>
-      <Link href='List' className="font-extrabold w-5/6 mx-auto text-xl md:text-2xl my-10 flex gap-2 hover:gap-3 items-center text-[#ad8954c9] hover:text-[#ad8954] transition-all duration-300">
-        Découvrez davantage de nos offres <FaArrowRight />
-      </Link>
     </div>
   );
 }

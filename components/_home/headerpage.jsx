@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef } from 'react';
-import TabsWithIcon from './searchtabs'
 import Link from 'next/link';
 
 const Carousel = () => {
@@ -84,12 +83,11 @@ const Carousel = () => {
                     <div className="item" style={{ backgroundImage: 'linear-gradient(to right, #00000050, #00000050), url("/home1.jpeg")' }}>
                         <div className="content">
                             <div className="title">Trouvez votre prochaine location</div>
-                            {/* <div className="name">EAGLE</div> */}
                             <div className="des">
                                 Accédez à une large gamme de logements adaptés à vos besoins.
                             </div>
                             <div className="btn lg:flex gap-4">
-                            <Link href='/contact' className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Contact</Link>
+                                <Link href='/contact' className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Contact</Link>
                             </div>
                         </div>
                     </div>
@@ -112,8 +110,8 @@ const Carousel = () => {
                             <div className="des">
                                 Parcourez une sélection exclusive de terrains prêts à être développés.
                             </div>
-                            <div className="btn lg:flex flex-col gap-4">
-                            <Link href='/contact' className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Contact</Link>
+                            <div className="btn lg:flex gap-4">
+                                <Link href='/contact' className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Contact</Link>
                             </div>
                         </div>
                     </div>
@@ -124,8 +122,8 @@ const Carousel = () => {
                             <div className="des">
                                 Bénéficiez d&apos;une gestion transparente et efficace de votre copropriété.
                             </div>
-                            <div className="btn lg:flex flex-col gap-4">
-                            <Link href='/contact' className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Contact</Link>
+                            <div className="btn lg:flex gap-4">
+                                <Link href='/contact' className="py-2 px-6 bg-[#ad8954] inline-block rounded-3xl text-sm text-[#fff] font-extrabold">Contact</Link>
                             </div>
                         </div>
                     </div>
@@ -137,11 +135,6 @@ const Carousel = () => {
                     <button className="prev" ref={prevBtnRef}>{'<'}</button>
                     <button className="next" ref={nextBtnRef}>{'>'}</button>
                 </div>
-
-                {/* <div className="timeRunning" ref={runningTimeRef}></div> */}
-            </div>
-            <div className='lg:w-4/6 lg:mx-auto mt-[-5rem] bg-[#fff] z-40 relative p-2 lg:p-4 rounded-2xl drop-shadow-lg mb-10'>
-                <TabsWithIcon />
             </div>
         </div>
     );

@@ -1,0 +1,22 @@
+// import { ClerkProvider } from "@clerk/nextjs";
+
+import "../globals.css";
+
+export const metadata = {
+  title: "UpDev",
+  description: "Help developers tweet about new technologies.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    // <ClerkProvider>
+      <html lang='en'>
+        <body>{children}</body>
+      </html>
+    // </ClerkProvider>
+  );
+}

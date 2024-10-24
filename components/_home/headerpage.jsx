@@ -136,8 +136,6 @@ const Carousel = () => {
                     <button className="prev" ref={prevBtnRef}>{'<'}</button>
                     <button className="next" ref={nextBtnRef}>{'>'}</button>
                 </div>
-
-                {/* <div className="timeRunning" ref={runningTimeRef}></div> */}
             </div>
         </div>
     );

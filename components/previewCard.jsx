@@ -10,7 +10,7 @@ import {
 
 export default function CardPlacehoderSkeleton() {
   return (
-    <Card className="mt-6 w-96 animate-pulse">
+    <Card className="mt-6 w-1/3 animate-pulse">
       <CardHeader
         shadow={false}
         floated={false}

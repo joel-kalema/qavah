@@ -9,6 +9,7 @@ import { Button } from "@material-tailwind/react";
 import { Dialog } from "@material-tailwind/react";
 
 import { BsPatchCheckFill } from "react-icons/bs";
+import { AiFillPicture } from "react-icons/ai";
 import Link from 'next/link';
 
 
@@ -23,6 +24,7 @@ export default function AddItem() {
     const [image3, setImage3] = useState(null);
 
     const [open, setOpen] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     const handleImageUpload = (index) => (e) => {
         const file = e.target.files[0];
@@ -43,6 +45,7 @@ export default function AddItem() {
 
         try {
             await uploadImagesAndAddItem(images, location, detail, price, type, rooms);
+            setLoading(false)
             setOpen(true)
         } catch (error) {
             console.error('Error adding item:', error);
@@ -59,12 +62,36 @@ export default function AddItem() {
     };
 
     const handleOpen = () => setOpen(!open);
+    const handleUpload = () => setLoading(!loading);
+
+    const ImageInput = [handleImageUpload(1), handleImageUpload(2), handleImageUpload(3)];
+    const villeInput = ["Kinshasa", "Lubumbashi", "Kolwezi", "Matadi", "Goma", "Bukavu"];
+    const Type = ["Parcelle", "Appartement"];
 
     return (
-        <div className='py-20 w-5/6 mx-auto'>
-            <h1 className='text-5xl text-[#ad8954] mb-6'>Ajouter un nouvel élément</h1>
+        <div className='py-20 w-4/6 mx-auto'>
+            <h1 className='text-5xl text-[#ad8954] mb-12'>Ajouter un nouvel élément</h1>
             <form onSubmit={handleSubmit}>
+                {/* Image upload */}
+                <div className='my-16'>
+                    <h2 className='mb-10 text-2xl font-extrabold'>Ajouter des Images (3 au max)</h2>
+                    {ImageInput.map((item) => (
+                        <div className='flex items-center gap-4 mb-4 border-dashed border-2 w-2/4 rounded-2xl p-4'>
+                            <AiFillPicture className='text-3xl text-[#ad8954]' />
+                            <input
+                                type="file"
+                                onChange={item}
+                                accept="image/*"
+                                required
+                            />
+                        </div>
+                    ))}
+                </div>
+
+                {/* add decriptioon */}
+
                 <div className="w-96">
+                    <h2 className='my-4 text-2xl font-extrabold'>Ajouter une description</h2>
                     <Textarea
                         type="text"
                         label="Descrition"
@@ -76,51 +103,31 @@ export default function AddItem() {
                 {/* Location as radio buttons */}
                 <div className='my-6'>
                     <h2 className='my-4 text-2xl font-extrabold'>Sélectionner la ville</h2>
-                    <Radio
-                        label="Kinshasa"
-                        name="location"
-                        value="Kinshasa"
-                        checked={location === 'Kinshasa'}
-                        onChange={(e) => setLocation(e.target.value)}
-                        required
-                    />
-                    <Radio
-                        label="Lubumbashi"
-                        name="location"
-                        value="Lubumbashi"
-                        checked={location === 'Lubumbashi'}
-                        onChange={(e) => setLocation(e.target.value)}
-                        required
-                    />
-                    <Radio
-                        label="Kolwezi"
-                        name="location"
-                        value="Kolwezi"
-                        checked={location === 'Kolwezi'}
-                        onChange={(e) => setLocation(e.target.value)}
-                        required
-                    />
+                    {villeInput.map((item) => (
+                        <Radio
+                            label={item}
+                            name="location"
+                            value={item}
+                            checked={location === item}
+                            onChange={(e) => setLocation(e.target.value)}
+                            required
+                        />
+                    ))}
                 </div>
 
                 {/* Type as radio buttons */}
                 <div>
                     <h2 className='my-4 text-2xl font-extrabold'>Sélectionner le Type</h2>
-                    <Radio
-                        label="Parcelle de Terrain"
+                    {Type.map((item) => (
+                        <Radio
+                        label={item}
                         name="type"
-                        value="parcelle"
-                        checked={type === 'parcelle'}
+                        value={item}
+                        checked={type === item}
                         onChange={(e) => setType(e.target.value)}
                         required
                     />
-                    <Radio
-                        label="Appartement"
-                        name="type"
-                        value="appartement"
-                        checked={type === 'appartement'}
-                        onChange={(e) => setType(e.target.value)}
-                        required
-                    />
+                    ))}
                 </div>
 
 
@@ -128,23 +135,18 @@ export default function AddItem() {
                     <Typography
                         variant="small"
                         color="blue-gray"
-                        className="mb-1 font-medium"
+                        className="my-4 text-2xl font-extrabold"
                     >
-                        Select Amount
+                        Sélectionnez le montant ($).
                     </Typography>
                     <div className="relative w-full">
                         <Input
                             type="number"
                             value={price}
-                            // value={value}
                             onChange={(e) => setPrice(e.target.value)}
                             className="!border-t-blue-gray-200 placeholder:text-blue-gray-300 placeholder:opacity-100  focus:!border-t-gray-900 appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                            labelProps={{
-                                className: "before:content-none after:content-none",
-                            }}
-                            containerProps={{
-                                className: "min-w-0",
-                            }}
+                            labelProps={{ className: "before:content-none after:content-none",}}
+                            containerProps={{className: "min-w-0",}}
                         />
                         <div className="absolute right-1 top-1 flex gap-0.5">
                             <IconButton
@@ -188,7 +190,7 @@ export default function AddItem() {
                         color="blue-gray"
                         className="mb-1 font-medium"
                     >
-                        Select Rooms
+                        Sélectionnez le nombre de pièces
                     </Typography>
                     <div className="relative w-full">
                         <Input
@@ -240,30 +242,7 @@ export default function AddItem() {
                     </Typography>
                 </div>
 
-                {/* Image upload */}
-                <div className='my-7'>
-                    <h2>Upload Images</h2>
-                    <input
-                        type="file"
-                        onChange={handleImageUpload(1)}
-                        accept="image/*"
-                        required
-                    />
-                    <input
-                        type="file"
-                        onChange={handleImageUpload(2)}
-                        accept="image/*"
-                        required
-                    />
-                    <input
-                        type="file"
-                        onChange={handleImageUpload(3)}
-                        accept="image/*"
-                        required
-                    />
-                </div>
-
-                <Button type="submit">Add Item</Button>
+                <Button onClick={handleUpload} type="submit">Ajouter un article</Button>
             </form>
 
             <Dialog open={open} handler={handleOpen} className='relative p-6 text-center'>
@@ -276,6 +255,10 @@ export default function AddItem() {
                     Fermer
                 </Link>
             </Dialog>
+
+            <div className={loading ? "fixed w-full bg-[#192746bf] top-0 left-0 flex justify-center items-center h-[100%]" : "hidden"}>
+                <div className="downoading"></div>
+            </div>
         </div>
     );
 }

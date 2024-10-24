@@ -14,6 +14,9 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import { Carousel } from "@material-tailwind/react";
+import { FaBed } from "react-icons/fa";
+import { MdLocationOn } from "react-icons/md";
 
 const title = Prompt({
   subsets: ['latin', 'latin-ext', 'thai', 'vietnamese'],
@@ -84,11 +87,11 @@ export default function Home() {
       </div>
       <div className='-mt-16 pb-20 w-5/6 mx-auto flex gap-8'>
         {items.length > 0 ? (
-          items.map((item) => (
+          items.map((item, index) => (
             <div key={item.id}>
               {editItem === item.id ? (
                 // If item is being edited, show the form
-                <div>
+                <div className='fixed bg-white z-50 top-0 w-full h-full left-0'>
                   <input
                     type="text"
                     name="location"
@@ -137,66 +140,75 @@ export default function Home() {
                       floated={false}
                       className="relative grid h-56 place-items-center bg-gray-300"
                     >
-                      <img src={item.images[0]} alt='image' width="200" />
+                      <Carousel
+                        className="rounded-xl"
+                        transition={{ duration: 1 }}
+                        autoplay={true}
+                        autoplayDelay={2000 + (index * 100)}
+                        loop={true}
+                        prevArrow={false}
+                        nextArrow={false}
+                        navigation={({ setActiveIndex, activeIndex, length }) => (
+                          <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+                            {new Array(length).fill("").map((_, i) => (
+                              <span
+                                key={i}
+                                className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+                                  }`}
+                                onClick={() => setActiveIndex(i)}
+                              />
+                            ))}
+                          </div>
+                        )}
+                      >
+                        {
+                          item.images.map((img) => (
+                            <img
+                              src={img}
+                              alt="image 1"
+                              className="h-full w-full object-cover"
+                            />
+                          ))
+                        }
+                      </Carousel>
                     </CardHeader>
                     <CardBody>
-                      <Typography
-                        className="mb-4 w-56"
-                      >
-                        {item.location}
+                      <div className='flex justify-between'>
+                        <Typography className="text-[#000] font-bold">
+                          {item.type}
+                        </Typography>
+                        <Typography className='font-extrabold text-[#000]'>
+                          $ {item.price}
+                        </Typography>
+                      </div>
+                      <Typography className='text-sm my-4'>
+                        {item.detail.substring(0, 60)}
                       </Typography>
-                      <Typography
-                      >
-                       <p>Detail: {item.detail}</p>
-                      </Typography>
-                      <Typography
-                      >
-                        Price: {item.price}
-                      </Typography>
-                      <Typography
-                      >
-                        Type: {item.type}
-                      </Typography>
-                      <Typography
-                      >
-                        Rooms: {item.rooms}
-                      </Typography>
+                      <div className='flex gap-3'>
+                        <Typography className='border border-[#676767] rounded-lg flex gap-2 items-center px-1 text-sm'>
+                          <FaBed />{item.rooms}
+                        </Typography>
+                        <Typography className='border border-[#676767] rounded-lg flex gap-2 items-center px-1 text-sm'>
+                          <MdLocationOn />{item.location}
+                        </Typography>
+                      </div>
                     </CardBody>
                     <CardFooter className="pt-0 flex gap-8">
-                      <Button
-                        onClick={() => handleEdit(item)}
-                      >
-                        Edit
-                      </Button>
-                      <Button
-                      color="red"
-                        onClick={() => handleDelete(item.id)}
-                      >
+                      <Button onClick={() => handleEdit(item)}>Edit</Button>
+                      <Button color="red" onClick={() => handleDelete(item.id)}>
                         Delete
                       </Button>
                     </CardFooter>
                   </Card>
-                  {/* <h2>{item.location}</h2>
-                  <p>Detail: {item.detail}</p>
-                  <p>Price: {item.price}</p>
-                  <p>Type: {item.type}</p>
-                  <p>Rooms: {item.rooms}</p>
-                  <div>
-                    {item.images.map((url, index) => (
-                      <img key={index} src={url} alt={`Item Image ${index + 1}`} width="200" />
-                    ))}
-                  </div>
-                  <button onClick={() => handleEdit(item)}>Edit</button>
-                  <button onClick={() => handleDelete(item.id)}>Delete</button> */}
                 </div>
               )}
             </div>
           ))
         ) : (
-          <div className='w-5/6 mx-auto flex justify-between'>
-            <CardPlacehoderSkeleton />
-            <CardPlacehoderSkeleton />
-            <CardPlacehoderSkeleton />
+          <div className='w-[100%] mx-auto flex gap-8'>
+            <CardPlacehoderSkeleton className="w-96" />
+            <CardPlacehoderSkeleton className="w-96" />
+            <CardPlacehoderSkeleton className="w-96" />
           </div>
         )}
       </div>

@@ -162,8 +162,9 @@ export default function Home() {
                         )}
                       >
                         {
-                          item.images.map((img) => (
+                          item.images.map((img, index) => (
                             <img
+                            key={index}
                               src={img}
                               alt="image 1"
                               className="h-full w-full object-cover"

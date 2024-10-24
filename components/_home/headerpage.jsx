@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef } from 'react';
-import TabsWithIcon from './searchtabs'
 import Link from 'next/link';
 
 const Carousel = () => {

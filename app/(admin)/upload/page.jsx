@@ -76,10 +76,9 @@ export default function AddItem() {
                 <div className='my-16'>
                     <h2 className='mb-10 text-2xl font-extrabold'>Ajouter des Images (3 au max)</h2>
                     {ImageInput.map((item, index) => (
-                        <div className='flex items-center gap-4 mb-4 border-dashed border-2 w-2/4 rounded-2xl p-4'>
+                        <div key={index} className='flex items-center gap-4 mb-4 border-dashed border-2 w-2/4 rounded-2xl p-4'>
                             <AiFillPicture className='text-3xl text-[#ad8954]' />
                             <input
-                                key={index}
                                 type="file"
                                 onChange={item}
                                 accept="image/*"
